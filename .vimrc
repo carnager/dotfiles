@@ -30,6 +30,16 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
+if neobundle#tap('bling.vim')
+    nnoremap <silent> n nzz:call BlingHighight()<CR>
+    nnoremap <silent> N Nzz:call BlingHighight()<CR>
+    nnoremap <silent> * *zz:call BlingHighight()<CR>
+    nnoremap <silent> # #zz:call BlingHighight()<CR>
+    if !g:bling_no_expr
+      cnoremap <silent> <expr> <enter> BlingExpressionHighlight()
+    endif
+endif
+
 
 " Colors
 set t_Co=256
