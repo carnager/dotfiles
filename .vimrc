@@ -1,17 +1,23 @@
 " NeoBundle
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  try
-	call neobundle#begin('$HOME/.vim/bundle/')
-  catch /E117/ " neobundle not installed
-	execute "!mkdir -p $HOME/.vim/bundle/neobundle.vim/"
-	execute "!" . "git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim/"
-	set rtp+=$HOME/.vim/bundle/neobundle.vim/
-	call neobundle#load_toml("$HOME/.vim/neobundle.toml", {})
+let s:bundle_dir = expand('$HOME/.vim/bundle')
+let s:neobundle_dir = s:bundle_dir . '/neobundle.vim'
+let s:neobundle_repo = 'https://github.com/Shougo/neobundle.vim'
+let s:neobundle_toml = expand('$HOME/.vim/neobundle.toml')
+let g:neobundle#cache_file = expand('$HOME/.vim/neobundlecache')
+let &runtimepath.=','.s:neobundle_dir
+try
+	call neobundle#begin(s:bundle_dir)
+catch /E117/ " neobundle not installed
+	execute "!mkdir -p " .  s:neobundle_dir
+	execute "!" . "git clone " s:neobundle_repo . " " . s:neobundle_dir
+	call neobundle#begin(s:bundle_dir)
+	call neobundle#load_toml(s:neobundle_toml, {})
 	NeoBundleInstall
+	call neobundle#end()
 	quit
-  endtry
+endtry
+
+
 
 " Bundles
 NeoBundleFetch 'Shougo/neobundle.vim'
