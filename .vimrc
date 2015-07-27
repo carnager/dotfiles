@@ -2,11 +2,16 @@
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
-  " Required:
-  set runtimepath+=/home/carnager/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('/home/carnager/.vim/bundle'))
+  try
+	call neobundle#begin('$HOME/.vim/bundle/')
+  catch /E117/ " neobundle not installed
+	execute "!mkdir -p $HOME/.vim/bundle/neobundle.vim/"
+	execute "!" . "git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim/"
+	set rtp+=$HOME/.vim/bundle/neobundle.vim/
+	call neobundle#load_toml("$HOME/.vim/neobundle.toml", {})
+	NeoBundleInstall
+	quit
+  endtry
 
 " Bundles
 NeoBundleFetch 'Shougo/neobundle.vim'
