@@ -1,0 +1,66 @@
+# set backend, valid choices: rofi, dmenu, slmenu
+backend=rofi
+
+# custom rofi settings (rofi reads settings from ~/.Xresources)
+# but you can override settings here.
+rofiopts="-no-levenshtein-sort"
+
+# If you don't have physical access to your music_dir
+# set this to no. This setting will make sure that ratings files
+# will be copied to their associated album
+music_dir_access=yes
+
+# path to your music
+music_path="/mnt/wasteland/Audio/Rips"
+
+# mpd socket file (for local filebrowser)
+#mpd_socket=/path/to/mpd/socket
+
+# Number of Songs to be added for "Random Tracks"
+value=20
+
+# stop on suspend?
+stop_after_suspend=no
+
+# instantly play newly added tracks
+add_auto_play=no
+
+# Separator used for splitting tags - Make sure this is something most
+# likely not used in tags itself. Can be multiple characters
+# If you change separator, update caches with clerk -update
+separator=" • "
+
+# use artist or albumartist for random tracks
+random_artist=albumartist
+
+# scrobbler to use. possible values: mpdscribble, mpdas
+scrobbler=mpdscribble
+
+# Fill these if scrobbler runs on a different host
+# set to 0 if mpdscribble runs locally
+ssh_lastfm=1
+ssh_host=tauron
+
+# color of the help messages
+help_color="#0C73C2"
+
+# custom keybindings
+add="Alt+1"
+insert="Alt+2"
+replace="Alt+3"
+
+addplay="Alt+4"
+insertplay="Alt+5"
+
+rate="Alt+8"
+
+# playback controls
+toggle="Alt+1"
+prev="Alt+2"
+next="Alt+3"
+stop="Alt+4"
+
+# playlist menu
+play="Alt+1"
+delete="Alt+2"
+

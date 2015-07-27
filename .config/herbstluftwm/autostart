@@ -1,0 +1,119 @@
+#!/bin/bash
+
+# $HOME/.config/herbstluftwm/autostart
+# bl1nk - http://kuchen.io
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+xsetroot -solid '#080808'
+hc keyunbind --all
+Mod=Mod4
+resizestep=0.05
+tag_names=( one two three four five six )
+tag_keys=( {1..9} 0 )
+
+hc keybind $Mod-Shift-q quit
+hc keybind $Mod-Shift-r reload
+hc keybind $Mod-q close_or_remove
+hc keybind $Mod-Return spawn termite
+#hc keybind $Mod-e spawn dmenu_run -q -i -t -h 25 -p ">" -fn "Pragmata pro-10:normal" -w 1500 -nb "#080808" -nf "#ffffff" -sb "#ffcc9a" -sf "#000000"
+hc keybind $Mod-p spawn rofi -rnow -font "PragmataPro-10" -fg "#505050" -bg "#000000" -hlfg "#FFFFFF" -hlbg "#0C73C2" -o 85 -bc "#505050"
+hc keybind Print spawn teiler
+hc keybind $Mod-Tab spawn simpleswitcher -now -font "Pragmata Pro-10" -fg "#505050" -bg "#000000" -hlfg "#FFFFFF" -hlbg "#0C73C2" -o 85
+
+hc keybind $Mod-Left     focus left
+hc keybind $Mod-Down     focus down
+hc keybind $Mod-Up     focus up
+hc keybind $Mod-Right     focus right
+hc keybind $Mod-Shift-Left     shift left
+hc keybind $Mod-Shift-Down     shift down
+hc keybind $Mod-Shift-Up     shift up
+hc keybind $Mod-Shift-Right     shift right
+hc keybind $Mod-u       split   bottom  0.5
+hc keybind $Mod-o       split   right   0.5
+hc keybind $Mod-Control-space split explode
+hc keybind $Mod-Control-r rotate
+hc keybind $Mod-Control-Left       resize left +$resizestep
+hc keybind $Mod-Control-Down       resize down +$resizestep
+hc keybind $Mod-Control-Up       resize up +$resizestep
+hc keybind $Mod-Control-Right       resize right +$resizestep
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        hc keybind "$Mod-$key" use_index "$i"
+        hc keybind "$Mod-Shift-$key" move_index "$i"
+    fi
+done
+
+hc keybind $Mod-period use_index +1 --skip-visible
+hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind $Mod-r remove
+hc keybind $Mod-space cycle_layout 1
+hc keybind $Mod-s floating toggle
+hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-Shift-p pseudotile toggle
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+hc keybind $Mod-BackSpace cycle_monitor
+hc keybind $Mod-w cycle +1
+hc keybind $Mod-Shift-w cycle -1
+hc keybind $Mod-c cycle +1
+hc keybind $Mod-i jumpto urgent
+
+hc set frame_border_active_color '#161616'
+hc set frame_border_normal_color '#101010'
+hc set frame_bg_normal_color '#191919'
+hc set frame_bg_active_color '#202020'
+hc set window_border_normal_color '#1c1c1c'
+hc set window_border_active_color '#87afd7'
+hc set window_border_urgent_color '#ea8484'
+hc set frame_active_opacity 30
+hc set frame_normal_opacity 10
+
+hc set default_frame_layout 2
+hc set always_show_frame 1
+hc set frame_bg_transparent 1
+hc set frame_border_width 4
+hc set window_border_width 1
+hc set window_border_inner_width 0
+hc set gapless_grid 1
+hc set frame_gap 0
+hc set window_gap -1
+hc set frame_padding 2
+hc set smart_frame_surroundings 0
+hc set smart_window_surroundings 0
+hc set mouse_recenter_gap 0
+hc set raise_on_focus 0
+hc set raise_on_click 1
+hc set focus_follows_mouse 0
+hc set swap_monitors_to_get_tag 1
+
+hc unrule -F
+hc rule focus=on
+hc rule title="Open Image" pseudotile=on
+hc rule title="Save As" pseudotile=on
+hc rule title="Save file" pseudotile=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
+
+hc unlock
+herbstclient set tree_style '╾│ ├└╼─┐'
+hc set_monitors 2560x1440+0+0 1920x1080+2560+0
+
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+#    "$panel" $monitor &
+#done
+$panel
+

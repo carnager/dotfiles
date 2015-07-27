@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $(/usr/lib/qt4/bin/qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get org.mpris.MediaPlayer2.Player PlaybackStatus) == "Playing" ]]; then
+    spotify_query
+else
+    cat /tmp/now_playing
+fi

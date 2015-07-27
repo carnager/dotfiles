@@ -1,0 +1,78 @@
+###### teiler configuration file ######
+
+DMENURC="${DMENURC:-$HOME/.config/dmenurc}"
+source $DMENURC
+
+##
+#   general options
+##
+
+img_path=$HOME/scrot
+SCREENCAST_PIDFILE=/tmp/$USER-teiler-screencast.pid
+time=3000
+timestamp_format="%Y%m%d%H%M%S"
+image_filetype=png
+recording_filetype=webm
+
+#function open {
+#    case "${1##*.}" in
+#        png) sxiv "$1" ;;
+#        webm) mpv "$1" ;;
+#        *) notify "$time" "Can't open file: $1"
+#    esac
+#}
+#
+#function upload {
+#    notify "$time" "Uploading: $1"
+#    scp "$1" df:public/scrot/ \
+#        && notify "$time" "Uploaded: $1" \
+#        || notify "$time" "Failed to upload: $1"
+#}
+
+
+##
+#   Configurations for each dependant tool
+##
+
+ffmpeg=(
+    '-f'        'x11grab' 
+    '-s'        "1920x1080"
+    '-i'        "$DISPLAY+0,0"
+    '-r'        '25'
+    '-quality'  'good'
+    '-cpu-used' '0'
+    '-b:v'      '5000k'
+    '-qmin'     '10'
+    '-qmax'     '42'
+    '-bufsize'  '1000k'
+    '-threads'  '4')
+
+dmenu=(
+    '-l'    '15'
+    '-fn'   "$font"
+    '-nf'   "$nf"
+    '-nb'   "$nb"
+    '-sf'   "$sf"
+    '-sb'   "$sb"
+    '-o'    '90')
+
+simpleswitcher=(
+    '-font' "$font"
+    '-fg'   "$nf"
+    '-bg'   "$nb"
+    '-hlfg' "$sf"
+    '-hlbg' "$sb"
+    '-bc'   "$bc"
+    '-o'    '80'
+    '-dmenu')
+
+dzen2=(
+    '-bg'   "$nb"
+    '-ta'   'c'
+    '-h'    '16'
+    '-e'    'onstartlower'
+    '-y'    '32'
+    '-x'    '-160'
+    '-w'    '120')
+
+# vim: set ft=zsh:

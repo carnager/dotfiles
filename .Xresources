@@ -1,0 +1,88 @@
+! urxvt settings
+
+URxvt.matcher.button:	    1
+URxvt.keysym.C-Delete:	    perl:matcher:last
+URxvt.keysym.M-Delete:	    perl:matcher:list
+URxvt.perl-ext-common:	    default,matcher
+URxvt.url-launcher:	        /usr/bin/chromium
+URxvt*scrollBar:	        false
+URxvt.depth:                32
+URxvt.background:           rgba:1111/1111/1111/eeee
+!URxvt*font:	                xft:DejaVu Sans Mono:size=9:regular
+!URxvt*font:                 -*-yancfont-medium-r-normal-*-12-80-100-100-c-60-iso8859-1
+!URxvt*boldFont:             -*-yancfont-medium-r-normal-*-12-80-100-100-c-60-iso8859-1
+URxvt*font:xft:SourceCodePro:pixelsize=14:antialias=true,xft:Symbola:pixelsize=14:antialias=true,xft:NanumGothic:pixelsize=16:antialias=true
+URxvt*boldFont:xft:SourceCodePro:pixelsize=14:antialias=true:bold,xft:Symbola:pixelsize=14:antialias=true:bold,xft:NanumGothic:pixelsize=16:antialias=true:bold
+URxvt*transparent:          true
+URxvt*shading:              90
+URxvt*tintColor:            #000000
+URxvt*blurRadius:           80
+xterm*faceName:             DejaVu Sans Mono:size=11
+
+
+! rofi settings
+
+rofi.color-window:          #000000,#0C73C2
+rofi.color-normal:          #000000,#A0A0A0,#000000,#0C73C2,#FFFFFF
+rofi.color-urgent:          #000000,#FFB2B2,#000000,#0C73C2,#FFFFFF
+rofi.color-active:          #000000,#C272C1,#000000,#FFFFFF,#000000
+rofi.color-enabled:         true
+rofi.borderwidth:	        1
+rofi.levenshtein-sort:      true
+rofi.font:                  fira mono 11
+rofi.padding:	            3
+rofi.ssh-client:            mosh
+rofi.ssh-command:           termite -e '{ssh-client} {host}'
+rofi.run-command:           {cmd}
+rofi.run-shell-command:     termite -e '{cmd}'
+rofi.lazy-filter-limit:     200
+rofi.fg-active:             #FF22FF
+rofi.kb-custom-1:           Alt+1
+rofi.kb-custom-2:           Alt+2
+rofi.kb-custom-3:           Alt+3
+rofi.kb-custom-4:           Alt+4
+rofi.kb-custom-5:           Alt+5
+rofi.kb-custom-6:           Alt+6
+rofi.kb-custom-7:           Alt+7
+rofi.kb-custom-8:           Alt+8
+rofi.kb-custom-9:           Alt+9
+
+
+! dmenu settings
+
+dmenu.selforeground:	    #FFFFFF
+dmenu.background:	        #000000
+dmenu.selbackground:	    #0C73C2
+dmenu.foreground:	        #A0A0A0
+dmenu.font:	                "DroidSansMono-9"
+
+
+! general colors
+
+*color6:	                #0ac1cd
+*color2:	                #cee318
+*color14:	                #63e7f0
+*color10:	                #ccff00
+*color7:	                #e4e4e4
+*background:	            #151515
+*color3:	                #ffe755
+*color11:	                #ff9f00
+*foreground:	            #aaaaaa
+*color15:	                #f3f3f3
+*color4:	                #048ac7
+*color0:	                #151515
+*color12:	                #48c6ff
+*color8:	                #666666
+*color5:	                #833c9f
+*color1:	                #ff005b
+*color13:	                #be67e1
+*color9:	                #ff00a0
+
+
+! font settings
+
+Xft.hintstyle:              hintfull
+Xft.hinting:                1
+Xft.antialias:              1
+Xft.rgba:                   rgb
+Xft.lcdfilter:              lcddefault

@@ -1,0 +1,8 @@
+#!/bin/bash
+scp_host=proteus
+scp_path_img=/srv/http/images/ss
+scp_path_vid=/srv/http/files/vid
+scp_path_paste=/srv/http/paste
+http_img=https://p.53280.de
+http_vid=https://files.53280.de/vid
+http_paste=https://paste.53280.de

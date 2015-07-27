@@ -1,0 +1,76 @@
+##### teiler configuration file ######
+
+# general variables
+
+slop_border=1
+slop_color="255,0,0"
+hidecursor=yes
+
+# the path where images, videos and pastes should be saved
+img_path=$HOME/Pictures/Screenshots
+vid_path=$HOME/Videos/Screencasts
+paste_path=$HOME/Pictures/Paste
+
+# some distibutions rename the gdbar binary to dzen2-gdbar
+# set it here, accordingly
+gdbar_binary=gdbar
+
+# image viewer and video player  to be used
+viewer="feh --scale-down"
+player=mpv
+
+# Editor to be used
+editor=mtpaint
+
+always_ul=1
+
+img_ul=fb
+vid_ul=fb
+paste_ul=fb
+
+# Screencast options
+# Resolution to change to when recording:
+res=1920x1080
+
+# Your original resolution. Teiler will change back to this
+# after a screencast
+#original_res=2560x1440
+
+# output to switch resolution on.
+#output=DVI-I-1
+
+# Ffmpeg settings
+# Possible encoder options: libav and ffmpeg
+encoder=ffmpeg
+encopts="-r 30 -c:v libx264 -preset slow -crf 18 -s $res"
+rect_encopts="-r 30 -c:v libx264 -preset slow -crf 18"
+ffaudio=""
+
+# record indicator
+rec_text="capturing..."
+rec_w=100
+rec_x=3400
+rec_y=0
+rec_font=PragmataPro-10
+rec_nf=\#FFFFFF
+rec_sf=\#000000
+
+
+# Normally you don't want to change anything here!
+SCREENCAST_PIDFILE=/tmp/$USER-teiler-screencast.pid
+INDICATOR_PIDFILE=/tmp/$USER-teiler-indicator.pid
+time=1000
+namekey=teiler
+random_string=$(date +'%Y-%m-%d-%H%M%S')
+#random_string=$(date +%s | sha256sum | base64 | head -c 4 ; echo)
+img_filemask="img-$random_string".png
+vid_filemask="vid-$random_string".mp4
+paste_filemask="p-$random_string".txt
+help_color="#0C73C2"
+
+###### rofi configuration ######
+
+# here you can override options for rofi. normally rofi options
+# are read from ~/.Xresources, so setting options there is recommended.
+# you can dump options for ~/.Xresources with "rofi -dump-xresources"
+#rofiopts="-location 2 -width 100"

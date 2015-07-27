@@ -1,0 +1,29 @@
+# set path to password store
+basedir=~/.password-store
+
+# fields to be used
+URL_field='URL'
+USERNAME_field='UserName'
+AUTOTYPE_field='autotype'
+
+## Programs to be used
+# Editor
+EDITOR='gvim -f'
+
+# Browser
+BROWSER='chromium'
+
+# Mist Settings
+help_color="#0C73C2"
+auto_enter=false
+
+autotype="Alt+1"
+type_user="Alt+2"
+type_pass="Alt+3"
+open_url="Alt+4"
+copy_name="Alt+u"
+copy_pass="Alt+p"
+edit="Alt+1"
+move="Alt+2"
+delete="Alt+3"
+show="Control+Return"

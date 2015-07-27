@@ -1,0 +1,32 @@
+[mediaplayer]
+command=$HOME/.config/i3blocks/mediaplayer
+color=#F92672
+interval=1
+
+[scrobbling]
+command=$HOME/.config/i3blocks/lastfm.sh
+color=#FF0000
+interval=3
+
+[mem]
+command=echo "RAM: $($HOME/.config/i3blocks/mem.sh)%"
+color=#4E82AA
+interval=10
+
+[cpu]
+#command=echo "CPU: $(sar 1 1 | awk '/^Average/ {printf "%3d", ((100.00 - $NF))}')%"
+command=echo " CPU: $($HOME/.config/i3blocks/cpu_load.sh)%"
+color=#FD971F
+interval=10
+
+[time1]
+command=nice -n +19 cat /tmp/__localtime
+color=#BBE054
+interval=once
+signal=1
+
+#[time2]
+#command=date +'%h-%d %H:%M'
+#color=#BBE054
+#interval=10
+

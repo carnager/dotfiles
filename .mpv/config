@@ -1,0 +1,15 @@
+[default]
+ao=pulse
+#ao=alsa:pcm.jack
+vo=opengl-hq
+#vo=vdpau,
+#audio-samplerate=44100
+vd-lavc-threads=4
+audio-channels=2
+title="${filename}"
+af=scaletempo
+index=default
+
+#softvol-max=600
+osc=no
+sub-auto=fuzzy

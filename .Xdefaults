@@ -1,0 +1,40 @@
+URxvt.matcher.button:	1
+URxvt.keysym.C-Delete:	perl:matcher:last
+URxvt.keysym.M-Delete:	perl:matcher:list
+URxvt.perl-ext-common:	default,matcher
+URxvt*boldFont:	xft:Pragmata Pro-10
+URxvt.url-launcher:	/usr/bin/chromium
+URxvt*scrollBar:	false
+URxvt*font:	xft:Dejavu Sans Mono:size=9
+xterm*faceName:            DejaVu Sans Mono:size=9
+rofi.bordercolor:	#0C73C2
+rofi.highlightbg:	#0C73C2
+rofi.background:	#000000
+rofi.borderwidth:	1
+rofi.highlightfg:	#FFFFFF
+rofi.foreground:	#A0A0A0
+rofi.font:	Pragmata Pro-18
+rofi.padding:	3
+dmenu.selforeground:	#FFFFFF
+dmenu.background:	#000000
+dmenu.selbackground:	#0C73C2
+dmenu.foreground:	#A0A0A0
+dmenu.font:	"Dejavu Sans Mono-18"
+*color6:	#0ac1cd
+*color2:	#cee318
+*color14:	#63e7f0
+*color10:	#ccff00
+*color7:	#e4e4e4
+*background:	#151515
+*color3:	#ffe755
+*color11:	#ff9f00
+*foreground:	#aaaaaa
+*color15:	#f3f3f3
+*color4:	#048ac7
+*color0:	#151515
+*color12:	#48c6ff
+*color8:	#666666
+*color5:	#833c9f
+*color1:	#ff005b
+*color13:	#be67e1
+*color9:	#ff00a0

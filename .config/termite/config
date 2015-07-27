@@ -1,0 +1,104 @@
+[options]
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = true
+visible_bell = true
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Fira Mono 14
+#font = Dejavu Sans Mono 11
+#font = Pragmata Pro 12
+#font = Roboto Condensed 11
+#font = Inconsolata Regular 11
+scrollback_lines = 1000
+search_wrap = true
+#icon_name = terminal
+#geometry = 640x480
+# 0.0: opaque, 1.0: transparent
+# "system", "on" or "off"
+cursor_blink = on
+# "block", "underline" or "ibeam"
+cursor_shape = block
+# $BROWSER is used by default
+browser = chromium
+# word characters used for word selection
+# (default if unset: all graphic non-punctuation/space characters)
+#word_chars = -A-Za-z0-9,./?%&#:_=+@~
+[colors]
+#foreground = #657b83 #solarized light
+#foreground = #808080
+#foreground_bold = #f8f8f2
+#foreground_dim = #808080
+#background = #121212
+#
+#color0 = #1B1D1E
+#color8 = #505354
+#color1 = #F92672
+#color9 = #FF5995
+#color2 = #82B414
+#color10 = #BBE054
+#color3 = #FD971F
+#color11 = #FEED6C
+#color12 = #4E82AA
+#color4 = #0C73C2
+#color5 = #8C54FE
+#color13 = #9E6FFE
+#color6 = #465457
+#color14 = #899CA1
+##color7 = #CCCCC6
+#color7 = #808080
+#color15 = #F8F8F2
+
+[hints]
+font = Monospace 10
+foreground = #dcdccc
+background = #3f3f3f
+padding = 2
+border = #3f3f3f
+border_width = 0.5
+roundness = 2.0
+
+[colors]
+
+# special
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = #181818
+
+# black
+color0  = #282a2e
+color8  = #373b41
+
+# red
+color1  = #a54242
+color9  = #cc6666
+
+# green
+color2  = #8c9440
+color10 = #b5bd68
+
+# yellow
+color3  = #F7CA88
+color11 = #f0c674
+
+# blue
+color4  = #5f819d
+color12 = #81a2be
+
+# magenta
+color5  = #85678f
+color13 = #b294bb
+
+# cyan
+color6  = #5e8d87
+color14 = #8abeb7
+
+# white
+color7  = #707880
+color15 = #c5c8c6
+

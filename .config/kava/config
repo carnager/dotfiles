@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# music directory has to match setting in mpd.conf
+mpdpath=/mnt/wasteland/Audio/Rips
+
+# where to save wallpaper
+wallpaper="$HOME/.config/kava/wallpaper.png"
+
+# prefer artist or albumartist?
+artist=albumartist
+
+# set these albumartists to "Various Artists"
+# useful, if you use several albumartists like "Soundtrack" or "Tribute"
+various=( "Tribute" "Sampler" "Soundtrack" "Split" )
+
+# resolution of wallpaper
+res="1920x1080"
+
+# main image to embedded cover into
+#image="xc:black"
+image="$HOME/.config/kava/wally.jpg"
+
+# size of cover image
+size="300x300"
+
+# placement of images, if defining several values kava will itterate through
+# them with each new song.
+# this example should be fine on a 1920x1080 monitor
+coordinates=(
+    "+1500+30" "+1500+150" "+1500+280" "+1500+410" "+1500+540"
+    "+1500+670" "+1400+700" "+1270+700" "+1140+700" "+1010+700"
+    "+880+700" "+750+700" "+620+700" "+490+700" "+360+700" "+230+700"
+    "+100+700" "+30+600" "+30+430" "+30+300" "+30+170" "+100+30"
+    "+230+30" "+360+30" "+490+30" "+620+30" "+750+30" "+880+30"
+    "+1010+30" "+1140+30" "+1270+30" "+1400+30"
+)
+
