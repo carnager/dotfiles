@@ -38,6 +38,7 @@ if neobundle#tap('bling.vim')
     if !g:bling_no_expr
       cnoremap <silent> <expr> <enter> BlingExpressionHighlight()
     endif
+    call neobundle#untap()
 endif
 
 
