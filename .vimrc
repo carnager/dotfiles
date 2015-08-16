@@ -43,6 +43,7 @@ endif
 
 
 " Colors
+let g:base16_shell_path=$HOME . '/bin/base16-shell'
 set t_Co=256
 let base16colorspace=256
 set background=dark
