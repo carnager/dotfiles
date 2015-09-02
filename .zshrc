@@ -148,7 +148,7 @@ hglob() {
    print **/*.c~file.c   # Alle *.c - Dateien, aber nicht 'file.c'
    print (foo|bar).*     # Alle Dateien mit 'foo' und / oder 'bar' am Anfang
    print *~*.*           # Nur Dateien ohne '.' in Namen
-   chmod 644 *(.^x)      # make all non-executable files publically readable
+   chmod 644 *(.^x)      # make all non-executable files publicly readable
    print -l *(.c|.h)     # Nur Dateien mit dem Suffix '.c' und / oder '.h'
    print **/*(g:users:)  # Alle Dateien/Verzeichnisse der Gruppe >users<
    echo /proc/*/cwd(:h:t:s/self//) # Analog zu >ps ax | awk '{print $1}'<"
