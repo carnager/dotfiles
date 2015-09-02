@@ -1,0 +1,87 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.013  000.013: --- VIM STARTING ---
+000.158  000.145: Allocated generic buffers
+000.278  000.120: locale set
+000.305  000.027: GUI prepared
+000.312  000.007: clipboard setup
+000.319  000.007: window checked
+000.992  000.673: inits 1
+001.000  000.008: parsing arguments
+001.001  000.001: expanding arguments
+001.021  000.020: shell init
+001.368  000.347: Termcap init
+001.434  000.066: inits 2
+001.628  000.194: init highlight
+001.961  000.187  000.187: sourcing /usr/share/vim/vimfiles/archlinux.vim
+002.025  000.337  000.150: sourcing /etc/vimrc
+003.206  000.706  000.706: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/util.vim
+004.719  002.426  001.720: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle.vim
+005.191  000.291  000.291: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/init.vim
+006.848  001.199  001.199: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/config.vim
+007.715  000.465  000.465: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/autoload.vim
+008.849  000.576  000.576: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/parser.vim
+009.803  000.409  000.409: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/types/git.vim
+033.530  000.066  000.066: sourcing /home/carnager/.vim/bundle/ultisnips/ftdetect/UltiSnips.vim
+033.614  000.056  000.056: sourcing /home/carnager/.vim/bundle/ultisnips/ftdetect/snippets.vim
+033.775  000.095  000.095: sourcing /usr/share/vim/vimfiles/ftdetect/conkyrc.vim
+033.905  000.051  000.051: sourcing /home/carnager/.vim/bundle/neobundle.vim/ftdetect/vimrecipe.vim
+034.035  020.617  020.349: sourcing /usr/share/vim/vim74/filetype.vim
+034.166  000.041  000.041: sourcing /usr/share/vim/vim74/ftplugin.vim
+034.290  000.039  000.039: sourcing /usr/share/vim/vim74/indent.vim
+034.916  000.500  000.500: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/commands.vim
+035.506  000.424  000.424: sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/installer.vim
+035.798  000.135  000.135: sourcing /home/carnager/.vim/bundle/NeoBundle.lock
+036.983  000.191  000.191: sourcing /usr/share/vim/vim74/syntax/syncolor.vim
+042.550  006.032  005.841: sourcing /home/carnager/.vim/colors/base16-default.vim
+043.167  000.185  000.185: sourcing /usr/share/vim/vim74/syntax/syncolor.vim
+043.539  000.186  000.186: sourcing /usr/share/vim/vim74/syntax/syncolor.vim
+049.023  006.295  005.924: sourcing /home/carnager/.vim/colors/base16-default.vim
+049.109  006.426  000.131: sourcing /usr/share/vim/vim74/syntax/synload.vim
+049.144  006.549  000.123: sourcing /usr/share/vim/vim74/syntax/syntax.vim
+049.230  000.010  000.010: sourcing /usr/share/vim/vim74/filetype.vim
+049.327  000.009  000.009: sourcing /usr/share/vim/vim74/ftplugin.vim
+090.697  088.609  048.887: sourcing $HOME/.vimrc
+090.725  000.151: sourcing vimrc file(s)
+091.897  000.497  000.497: sourcing /home/carnager/.vim/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+092.449  001.466  000.969: sourcing /home/carnager/.vim/bundle/ctrlp.vim/plugin/ctrlp.vim
+092.931  000.295  000.295: sourcing /home/carnager/.vim/bundle/ctrlp-extensions.vim/plugin/yankring.vim
+094.363  001.250  001.250: sourcing /home/carnager/.vim/bundle/vim-surround/plugin/surround.vim
+094.871  000.323  000.323: sourcing /home/carnager/.vim/bundle/vim-bling/plugin/bling.vim
+103.344  008.295  008.295: sourcing /home/carnager/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+103.638  000.075  000.075: sourcing /home/carnager/.vim/bundle/ultisnips/autoload/UltiSnips/map_keys.vim
+103.747  000.319  000.244: sourcing /home/carnager/.vim/bundle/ultisnips/plugin/UltiSnips.vim
+104.029  000.066  000.066: sourcing /usr/share/vim/vim74/plugin/getscriptPlugin.vim
+104.257  000.207  000.207: sourcing /usr/share/vim/vim74/plugin/gzip.vim
+104.496  000.215  000.215: sourcing /usr/share/vim/vim74/plugin/logiPat.vim
+104.680  000.162  000.162: sourcing /usr/share/vim/vim74/plugin/matchparen.vim
+105.299  000.566  000.566: sourcing /usr/share/vim/vim74/plugin/netrwPlugin.vim
+105.373  000.036  000.036: sourcing /usr/share/vim/vim74/plugin/rrhelper.vim
+105.424  000.025  000.025: sourcing /usr/share/vim/vim74/plugin/spellfile.vim
+105.605  000.154  000.154: sourcing /usr/share/vim/vim74/plugin/tarPlugin.vim
+105.723  000.084  000.084: sourcing /usr/share/vim/vim74/plugin/tohtml.vim
+105.894  000.141  000.141: sourcing /usr/share/vim/vim74/plugin/vimballPlugin.vim
+106.231  000.304  000.304: sourcing /usr/share/vim/vim74/plugin/zipPlugin.vim
+106.403  000.053  000.053: sourcing /home/carnager/.vim/after/plugin/rebind.vim
+106.540  000.059  000.059: sourcing /home/carnager/.vim/bundle/neobundle.vim/plugin/neobundle.vim
+106.681  000.056  000.056: sourcing /home/carnager/.vim/bundle/ctrlp-extensions.vim/after/plugin/ctrlp.vim
+106.864  000.104  000.104: sourcing /home/carnager/.vim/bundle/ultisnips/after/plugin/UltiSnips_after.vim
+106.872  001.967: loading plugins
+109.003  002.131: inits 3
+109.154  000.151: reading viminfo
+114.470  005.316: setup clipboard
+114.494  000.024: setting raw mode
+114.496  000.002: start termcap
+114.598  000.102: clearing screen
+115.192  000.594: opening buffers
+115.326  000.134: BufEnter autocommands
+115.329  000.003: editing files in windows
+115.771  000.442: VimEnter autocommands
+115.774  000.003: before starting main loop
+116.276  000.329  000.329: sourcing /home/carnager/.vim/bundle/ctrlp-extensions.vim/autoload/yankring.vim
+118.374  002.271: first screen update
+118.378  000.004: --- VIM STARTED ---

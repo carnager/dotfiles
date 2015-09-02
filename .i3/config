@@ -259,8 +259,8 @@ bindsym $mod+Control+F1 exec --no-startup-id clerk --current
 bindsym $mod+Control+F6 exec --no-startup-id clerk --queue show
 bindsym $mod+Control+F7 exec --no-startup-id clerk --queue delete
 bindsym $mod+Mod1+F4 exec --no-startup-id clerk --add latest
-bindsym $mod+Shift+F11 exec --no-startup-id rofi-pass type
-bindsym $mod+Control+F11 exec --no-startup-id rofi-pass insert
+bindsym $mod+Shift+F11 exec --no-startup-id rofi-pass
+bindsym $mod+Control+F11 exec --no-startup-id rofi-pass --last-used
 bindsym $mod+Escape exec --no-startup-id i3lock
 
 bindsym $mod+Shift+F6 exec --no-startup-id rofi -font "PragmataPro-10" -fg "#505050" -bg "#000000" -hlfg "#FFFFFF" -hlbg "#0C73C2" -o 85 -bc "#505050" -json $HOME/bin/rofi/mpd.json

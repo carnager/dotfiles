@@ -8,6 +8,7 @@ URxvt*scrollBar:	false
 URxvt*font:	xft:Dejavu Sans Mono:size=9
 xterm*faceName:            DejaVu Sans Mono:size=9
 rofi.bordercolor:	#0C73C2
+rofi.case-sensitive: 1
 rofi.highlightbg:	#0C73C2
 rofi.background:	#000000
 rofi.borderwidth:	1

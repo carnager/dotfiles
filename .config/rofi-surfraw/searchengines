@@ -1,4 +1,6 @@
-Google Images - surfraw - !gi - duckduckgo !gi
-Bing Images - surfraw - !bi - duckduckgo !bi
-Rebuy - custom - !rb - https://www.rebuy.de/kaufen/suchen?q=
-Wikipedia - surfraw - !wp - wikipedia
+!gi - surfraw - duckduckgo !gi
+!aur - surfraw - duckduckgo !aur
+!bi - surfraw - duckduckgo !bi
+!rb - custom - https://www.rebuy.de/kaufen/suchen?q=
+!wp - surfraw - wikipedia
+!sp - custom - http://www.sputnikmusic.com/search_results.php?genreid=0&search_in=Bands&search_text=

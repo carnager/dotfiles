@@ -1,3 +1,4 @@
+.zsh/histfile
 .vim/bundle
 .config/clerk/tracks.cache.json
 .config/clerk/albums.cache.json

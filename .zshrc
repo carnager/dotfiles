@@ -370,3 +370,7 @@ source /usr/bin/virtualenvwrapper.sh
 # Base16 Shell
 BASE16_SHELL="$HOME/bin/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+eval "$(fasd --init auto)"
+alias v='f -e vim' # quick opening files with vim
+alias m='f -b current -e mpv' # quick opening files with mplayer
+alias o='a -e xdg-open' # quick opening files with xdg-open

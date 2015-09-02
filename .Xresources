@@ -35,10 +35,11 @@ rofi.ssh-client:            mosh
 rofi.ssh-command:           termite -e '{ssh-client} {host}'
 rofi.run-command:           {cmd}
 rofi.run-shell-command:     termite -e '{cmd}'
-rofi.lazy-filter-limit:     200
+rofi.lazy-filter-limit:     400
 rofi.fg-active:             #FF22FF
 rofi.kb-custom-1:           Alt+1
 rofi.kb-custom-2:           Alt+2
+rofi.case-insensitive:      true
 rofi.kb-custom-3:           Alt+3
 rofi.kb-custom-4:           Alt+4
 rofi.kb-custom-5:           Alt+5
@@ -46,7 +47,7 @@ rofi.kb-custom-6:           Alt+6
 rofi.kb-custom-7:           Alt+7
 rofi.kb-custom-8:           Alt+8
 rofi.kb-custom-9:           Alt+9
-
+rofi.key-run:               F2
 
 ! dmenu settings
 

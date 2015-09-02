@@ -1,4 +1,5 @@
 # set general options
+cd $HOME
 xset +fp /usr/share/fonts/local/
 xset +fp /usr/share/fonts/misc/
 xrandr --auto --output DP-1 --primary --auto --output HDMI-1 --right-of DP-1
@@ -11,8 +12,6 @@ xrdb -load ~/.Xresources
 
 # startx $foobar starts the session
 if [[ $2 == gnome ]]; then
-    gnome-session
-elif [[ $2 == kde ]]; then
-    exec openbox
+    exec gnome-session
 else exec i3 --shmlog-size=26214400
 fi

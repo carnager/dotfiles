@@ -1,0 +1,383 @@
+0: Vim: Warning: Output is not to a terminal
+1.99549698829651: chdir(/etc)[?25l[J
+1.99552989006042: fchdir() to previous dir[J
+1.9956910610199: sourcing "/etc/vimrc"[J
+1.99586486816406: Searching for "archlinux.vim" in "/home/carnager/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after"[J
+1.99596190452576: Searching for "/home/carnager/.vim/archlinux.vim"[J
+1.99612188339233: Searching for "/usr/share/vim/vimfiles/archlinux.vim"[J
+1.99613404273987: chdir(/usr/share/vim/vimfiles)[J
+1.99615693092346: fchdir() to previous dir[J
+1.99655890464783: line 11: sourcing "/usr/share/vim/vimfiles/archlinux.vim"[J
+1.99657106399536: finished sourcing /usr/share/vim/vimfiles/archlinux.vim[J
+1.99662590026855: continuing in /etc/vimrc[J
+1.99671196937561: Searching for "/usr/share/vim/vim74/archlinux.vim"[J
+1.99680995941162: Searching for "/usr/share/vim/vimfiles/after/archlinux.vim"[J
+1.99695706367493: Searching for "/home/carnager/.vim/after/archlinux.vim"[J
+1.99696898460388: finished sourcing /etc/vimrc[J
+1.99697804450989: chdir(/home/carnager)[J
+1.99708390235901: fchdir() to previous dir[J
+1.997230052948: sourcing "$HOME/.vimrc"[J
+1.99757385253906: Searching for "autoload/neobundle.vim" in "/home/carnager/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+1.99770283699036: Searching for "/home/carnager/.vim/autoload/neobundle.vim"[J
+1.99782085418701: Searching for "/usr/share/vim/vimfiles/autoload/neobundle.vim"[J
+1.99793696403503: Searching for "/usr/share/vim/vim74/autoload/neobundle.vim"[J
+1.99807405471802: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle.vim"[J
+1.99820685386658: Searching for "/home/carnager/.vim/after/autoload/neobundle.vim"[J
+1.99838900566101: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle.vim"[J
+1.99849700927734: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload)[J
+1.99856305122375: fchdir() to previous dir[J
+1.99883890151978: line 8: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle.vim"[J
+1.99924302101135: Searching for "autoload/neobundle/util.vim" in "/home/carnager/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+1.99937891960144: Searching for "/home/carnager/.vim/autoload/neobundle/util.vim"[J
+1.99952387809753: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/util.vim"[J
+1.99965596199036: Searching for "/usr/share/vim/vim74/autoload/neobundle/util.vim"[J
+1.99981093406677: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/util.vim"[J
+1.99996185302734: Searching for "/home/carnager/.vim/after/autoload/neobundle/util.vim"[J
+2.00015902519226: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/util.vim"[J
+2.00028395652771: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.00034999847412: fchdir() to previous dir[J
+2.00130605697632: line 43: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/util.vim"[J
+2.00145602226257: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/util.vim[J
+2.00336885452271: continuing in /home/carnager/git/dotfiles/.vim/bundle/neobundle.vim/autoload/neobundle.vim[J
+2.00350999832153: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle.vim[J
+2.0036449432373: continuing in /home/carnager/.vimrc[J
+2.00400996208191: Searching for "autoload/neobundle/init.vim" in "/home/carnager/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+2.00410199165344: Searching for "/home/carnager/.vim/autoload/neobundle/init.vim"[J
+2.00422692298889: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/init.vim"[J
+2.00433588027954: Searching for "/usr/share/vim/vim74/autoload/neobundle/init.vim"[J
+2.00444889068604: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/init.vim"[J
+2.00458097457886: Searching for "/home/carnager/.vim/after/autoload/neobundle/init.vim"[J
+2.00477504730225: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/init.vim"[J
+2.00490093231201: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.00497889518738: fchdir() to previous dir[J
+2.00549387931824: line 5: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/init.vim"[J
+2.00575399398804: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/init.vim[J
+2.00602293014526: continuing in function neobundle#begin[J
+2.00629997253418: Searching for "autoload/neobundle/config.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+2.00639390945435: Searching for "/home/carnager/.vim/autoload/neobundle/config.vim"[J
+2.00653696060181: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/config.vim"[J
+2.00667285919189: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/config.vim"[J
+2.00678896903992: Searching for "/usr/share/vim/vim74/autoload/neobundle/config.vim"[J
+2.00690197944641: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/config.vim"[J
+2.00698804855347: Searching for "/home/carnager/.vim/after/autoload/neobundle/config.vim"[J
+2.00711393356323: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/config.vim"[J
+2.00719404220581: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.00723505020142: fchdir() to previous dir[J
+2.00815391540527: line 21: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/config.vim"[J
+2.00825691223145: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/config.vim[J
+2.00851488113403: continuing in function neobundle#begin..neobundle#init#_rc[J
+2.00876688957214: Searching for "autoload/neobundle/autoload.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+2.00885200500488: Searching for "/home/carnager/.vim/autoload/neobundle/autoload.vim"[J
+2.00898289680481: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/autoload.vim"[J
+2.0090708732605: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/autoload.vim"[J
+2.00915193557739: Searching for "/usr/share/vim/vim74/autoload/neobundle/autoload.vim"[J
+2.00924706459045: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/autoload.vim"[J
+2.00934100151062: Searching for "/home/carnager/.vim/after/autoload/neobundle/autoload.vim"[J
+2.00946092605591: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/autoload.vim"[J
+2.00954103469849: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.00958395004272: fchdir() to previous dir[J
+2.01001286506653: line 22: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/autoload.vim"[J
+2.01011395454407: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/autoload.vim[J
+2.01046800613403: continuing in function neobundle#begin..neobundle#init#_rc[J
+2.01073002815247: Searching for "autoload/neobundle/parser.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+2.01080989837646: Searching for "/home/carnager/.vim/autoload/neobundle/parser.vim"[J
+2.01090502738953: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/parser.vim"[J
+2.01098203659058: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/parser.vim"[J
+2.01109194755554: Searching for "/usr/share/vim/vim74/autoload/neobundle/parser.vim"[J
+2.01122403144836: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/parser.vim"[J
+2.01130485534668: Searching for "/home/carnager/.vim/after/autoload/neobundle/parser.vim"[J
+2.01142406463623: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/parser.vim"[J
+2.01150584220886: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.01154804229736: fchdir() to previous dir[J
+2.01205992698669: line 21: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/parser.vim"[J
+2.01216101646423: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/parser.vim[J
+2.0123929977417: continuing in /home/carnager/.vimrc[J
+2.0124249458313: Executing FuncUndefined Auto commands for "*"[J
+2.01245093345642: autocommand call neobundle#autoload#function()[J
+2.01250290870667: 
+2.01266288757324: Searching for "autoload/neobundle/types/git.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim"[J
+2.01271986961365: Searching for "/home/carnager/.vim/autoload/neobundle/types/git.vim"[J
+2.01278686523438: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/types/git.vim"[J
+2.01283884048462: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/types/git.vim"[J
+2.01288890838623: Searching for "/usr/share/vim/vim74/autoload/neobundle/types/git.vim"[J
+2.012943983078: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/types/git.vim"[J
+2.01299691200256: Searching for "/home/carnager/.vim/after/autoload/neobundle/types/git.vim"[J
+2.01306486129761: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/types/git.vim"[J
+2.01311182975769: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/types)[J
+2.01313900947571: fchdir() to previous dir[J
+2.01347804069519: line 5: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/types/git.vim"[J
+2.01353788375854: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/types/git.vim[J
+2.01738405227661: continuing in function neobundle#parser#fetch..<SNR>9_parse_arg..neobundle#parser#_init_bundle..neobundle#parser#path..neobundle#config#get_types[J
+2.01776099205017: Searching for "filetype.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.0177960395813: Searching for "/home/carnager/.vim/filetype.vim"[J
+2.01784300804138: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/filetype.vim"[J
+2.01790404319763: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/filetype.vim"[J
+2.01795291900635: Searching for "/home/carnager/.vim/bundle/vim-surround/filetype.vim"[J
+2.01800203323364: Searching for "/home/carnager/.vim/bundle/vim-bling/filetype.vim"[J
+2.01805186271667: Searching for "/home/carnager/.vim/bundle/vim-easymotion/filetype.vim"[J
+2.01809597015381: Searching for "/home/carnager/.vim/bundle/ultisnips/filetype.vim"[J
+2.01814484596252: Searching for "/home/carnager/.vim/bundle/.neobundle/filetype.vim"[J
+2.01818299293518: Searching for "/usr/share/vim/vimfiles/filetype.vim"[J
+2.01822304725647: Searching for "/usr/share/vim/vim74/filetype.vim"[J
+2.0182409286499: chdir(/usr/share/vim/vim74)[J
+2.01826405525208: fchdir() to previous dir[J
+2.03711700439453: line 30: sourcing "/usr/share/vim/vim74/filetype.vim"[J
+2.03749704360962: Searching for "ftdetect/*.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.03754591941833: Searching for "/home/carnager/.vim/ftdetect/*.vim"[J
+2.03760194778442: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/ftdetect/*.vim"[J
+2.03766584396362: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/ftdetect/*.vim"[J
+2.03772497177124: Searching for "/home/carnager/.vim/bundle/vim-surround/ftdetect/*.vim"[J
+2.03777098655701: Searching for "/home/carnager/.vim/bundle/vim-bling/ftdetect/*.vim"[J
+2.03782796859741: Searching for "/home/carnager/.vim/bundle/vim-easymotion/ftdetect/*.vim"[J
+2.03791999816895: Searching for "/home/carnager/.vim/bundle/ultisnips/ftdetect/*.vim"[J
+2.03795695304871: chdir(/home/carnager/.vim/bundle/ultisnips/ftdetect)[J
+2.03798198699951: fchdir() to previous dir[J
+2.03810691833496: line 2712: sourcing "/home/carnager/.vim/bundle/ultisnips/ftdetect/UltiSnips.vim"[J
+2.03816199302673: finished sourcing /home/carnager/.vim/bundle/ultisnips/ftdetect/UltiSnips.vim[J
+2.03820395469666: continuing in /usr/share/vim/vim74/filetype.vim[J
+2.03823900222778: chdir(/home/carnager/.vim/bundle/ultisnips/ftdetect)[J
+2.03826284408569: fchdir() to previous dir[J
+2.03838086128235: line 2712: sourcing "/home/carnager/.vim/bundle/ultisnips/ftdetect/snippets.vim"[J
+2.03843188285828: finished sourcing /home/carnager/.vim/bundle/ultisnips/ftdetect/snippets.vim[J
+2.03846788406372: continuing in /usr/share/vim/vim74/filetype.vim[J
+2.03852605819702: Searching for "/home/carnager/.vim/bundle/.neobundle/ftdetect/*.vim"[J
+2.0385959148407: Searching for "/usr/share/vim/vimfiles/ftdetect/*.vim"[J
+2.03862285614014: chdir(/usr/share/vim/vimfiles/ftdetect)[J
+2.03864693641663: fchdir() to previous dir[J
+2.03883290290833: line 2712: sourcing "/usr/share/vim/vimfiles/ftdetect/conkyrc.vim"[J
+2.0388879776001: finished sourcing /usr/share/vim/vimfiles/ftdetect/conkyrc.vim[J
+2.03892803192139: continuing in /usr/share/vim/vim74/filetype.vim[J
+2.03897500038147: Searching for "/usr/share/vim/vim74/ftdetect/*.vim"[J
+2.03902387619019: Searching for "/usr/share/vim/vimfiles/after/ftdetect/*.vim"[J
+2.03907299041748: Searching for "/home/carnager/.vim/after/ftdetect/*.vim"[J
+2.03916192054749: Searching for "/home/carnager/.vim/bundle/neobundle.vim/ftdetect/*.vim"[J
+2.03920292854309: chdir(/home/carnager/.vim/bundle/neobundle.vim/ftdetect)[J
+2.03922891616821: fchdir() to previous dir[J
+2.03935599327087: line 2712: sourcing "/home/carnager/.vim/bundle/neobundle.vim/ftdetect/vimrecipe.vim"[J
+2.03941702842712: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/ftdetect/vimrecipe.vim[J
+2.03945899009705: continuing in /usr/share/vim/vim74/filetype.vim[J
+2.03953385353088: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/ftdetect/*.vim"[J
+2.03970193862915: Searching for "/home/carnager/.vim/bundle/ultisnips/after/ftdetect/*.vim"[J
+2.03974199295044: finished sourcing /usr/share/vim/vim74/filetype.vim[J
+2.03977298736572: continuing in /home/carnager/.vimrc[J
+2.03981995582581: Searching for "/usr/share/vim/vimfiles/after/filetype.vim"[J
+2.03986287117004: Searching for "/home/carnager/.vim/after/filetype.vim"[J
+2.03991794586182: Searching for "/home/carnager/.vim/bundle/neobundle.vim/filetype.vim"[J
+2.03998303413391: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/filetype.vim"[J
+2.04004001617432: Searching for "/home/carnager/.vim/bundle/ultisnips/after/filetype.vim"[J
+2.04045104980469: Searching for "ftplugin.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04050302505493: Searching for "/home/carnager/.vim/ftplugin.vim"[J
+2.0405809879303: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/ftplugin.vim"[J
+2.04068303108215: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/ftplugin.vim"[J
+2.04073905944824: Searching for "/home/carnager/.vim/bundle/vim-surround/ftplugin.vim"[J
+2.0407919883728: Searching for "/home/carnager/.vim/bundle/vim-bling/ftplugin.vim"[J
+2.04084801673889: Searching for "/home/carnager/.vim/bundle/vim-easymotion/ftplugin.vim"[J
+2.04089903831482: Searching for "/home/carnager/.vim/bundle/ultisnips/ftplugin.vim"[J
+2.04095101356506: Searching for "/home/carnager/.vim/bundle/.neobundle/ftplugin.vim"[J
+2.04099082946777: Searching for "/usr/share/vim/vimfiles/ftplugin.vim"[J
+2.04103493690491: Searching for "/usr/share/vim/vim74/ftplugin.vim"[J
+2.04105496406555: chdir(/usr/share/vim/vim74)[J
+2.04108095169067: fchdir() to previous dir[J
+2.04117488861084: line 30: sourcing "/usr/share/vim/vim74/ftplugin.vim"[J
+2.04121494293213: finished sourcing /usr/share/vim/vim74/ftplugin.vim[J
+2.04132390022278: continuing in /home/carnager/.vimrc[J
+2.04137396812439: Searching for "/usr/share/vim/vimfiles/after/ftplugin.vim"[J
+2.04141783714294: Searching for "/home/carnager/.vim/after/ftplugin.vim"[J
+2.04147505760193: Searching for "/home/carnager/.vim/bundle/neobundle.vim/ftplugin.vim"[J
+2.04153895378113: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/ftplugin.vim"[J
+2.04159593582153: Searching for "/home/carnager/.vim/bundle/ultisnips/after/ftplugin.vim"[J
+2.04198789596558: Searching for "indent.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04202604293823: Searching for "/home/carnager/.vim/indent.vim"[J
+2.04207587242126: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/indent.vim"[J
+2.0421359539032: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/indent.vim"[J
+2.04218602180481: Searching for "/home/carnager/.vim/bundle/vim-surround/indent.vim"[J
+2.04224705696106: Searching for "/home/carnager/.vim/bundle/vim-bling/indent.vim"[J
+2.04229998588562: Searching for "/home/carnager/.vim/bundle/vim-easymotion/indent.vim"[J
+2.04235005378723: Searching for "/home/carnager/.vim/bundle/ultisnips/indent.vim"[J
+2.04240298271179: Searching for "/home/carnager/.vim/bundle/.neobundle/indent.vim"[J
+2.0424439907074: Searching for "/usr/share/vim/vimfiles/indent.vim"[J
+2.04249095916748: Searching for "/usr/share/vim/vim74/indent.vim"[J
+2.04251098632812: chdir(/usr/share/vim/vim74)[J
+2.04253602027893: fchdir() to previous dir[J
+2.04262685775757: line 30: sourcing "/usr/share/vim/vim74/indent.vim"[J
+2.04266500473022: finished sourcing /usr/share/vim/vim74/indent.vim[J
+2.04269886016846: continuing in /home/carnager/.vimrc[J
+2.04274296760559: Searching for "/usr/share/vim/vimfiles/after/indent.vim"[J
+2.04278492927551: Searching for "/home/carnager/.vim/after/indent.vim"[J
+2.0428409576416: Searching for "/home/carnager/.vim/bundle/neobundle.vim/indent.vim"[J
+2.0429048538208: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/indent.vim"[J
+2.04296803474426: Searching for "/home/carnager/.vim/bundle/ultisnips/after/indent.vim"[J
+2.04339385032654: Searching for "autoload/neobundle/commands.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04345083236694: Searching for "/home/carnager/.vim/autoload/neobundle/commands.vim"[J
+2.0435209274292: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/autoload/neobundle/commands.vim"[J
+2.04359698295593: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/autoload/neobundle/commands.vim"[J
+2.0436680316925: Searching for "/home/carnager/.vim/bundle/vim-surround/autoload/neobundle/commands.vim"[J
+2.04373788833618: Searching for "/home/carnager/.vim/bundle/vim-bling/autoload/neobundle/commands.vim"[J
+2.04381203651428: Searching for "/home/carnager/.vim/bundle/vim-easymotion/autoload/neobundle/commands.vim"[J
+2.04388189315796: Searching for "/home/carnager/.vim/bundle/ultisnips/autoload/neobundle/commands.vim"[J
+2.04395198822021: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/commands.vim"[J
+2.04401087760925: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/commands.vim"[J
+2.04406404495239: Searching for "/usr/share/vim/vim74/autoload/neobundle/commands.vim"[J
+2.04412698745728: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/commands.vim"[J
+2.04418396949768: Searching for "/home/carnager/.vim/after/autoload/neobundle/commands.vim"[J
+2.04425501823425: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/commands.vim"[J
+2.04429602622986: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.0443229675293: fchdir() to previous dir[J
+2.04493594169617: line 31: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/commands.vim"[J
+2.04500198364258: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/commands.vim[J
+2.04505300521851: continuing in /home/carnager/.vimrc[J
+2.04508686065674: Executing FuncUndefined Auto commands for "*"[J
+2.04511594772339: autocommand call neobundle#autoload#function()[J
+2.04517889022827: 
+2.04560303688049: Searching for "autoload/neobundle/installer.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04565095901489: Searching for "/home/carnager/.vim/autoload/neobundle/installer.vim"[J
+2.04571890830994: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/autoload/neobundle/installer.vim"[J
+2.0457968711853: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/autoload/neobundle/installer.vim"[J
+2.04587197303772: Searching for "/home/carnager/.vim/bundle/vim-surround/autoload/neobundle/installer.vim"[J
+2.04594087600708: Searching for "/home/carnager/.vim/bundle/vim-bling/autoload/neobundle/installer.vim"[J
+2.04601097106934: Searching for "/home/carnager/.vim/bundle/vim-easymotion/autoload/neobundle/installer.vim"[J
+2.04608106613159: Searching for "/home/carnager/.vim/bundle/ultisnips/autoload/neobundle/installer.vim"[J
+2.04617691040039: Searching for "/home/carnager/.vim/bundle/.neobundle/autoload/neobundle/installer.vim"[J
+2.04624795913696: Searching for "/usr/share/vim/vimfiles/autoload/neobundle/installer.vim"[J
+2.04630088806152: Searching for "/usr/share/vim/vim74/autoload/neobundle/installer.vim"[J
+2.04636287689209: Searching for "/usr/share/vim/vimfiles/after/autoload/neobundle/installer.vim"[J
+2.04642605781555: Searching for "/home/carnager/.vim/after/autoload/neobundle/installer.vim"[J
+2.04650592803955: Searching for "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/installer.vim"[J
+2.04655599594116: chdir(/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle)[J
+2.04658484458923: fchdir() to previous dir[J
+2.04712200164795: line 1: sourcing "/home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/installer.vim"[J
+2.04718494415283: finished sourcing /home/carnager/.vim/bundle/neobundle.vim/autoload/neobundle/installer.vim[J
+2.04737901687622: continuing in function neobundle#commands#check[J
+2.04740500450134: chdir(/home/carnager/.vim/bundle)[J
+2.04743099212646: fchdir() to previous dir[J
+2.04762887954712: line 3: sourcing "/home/carnager/.vim/bundle/NeoBundle.lock"[J
+2.04767203330994: finished sourcing /home/carnager/.vim/bundle/NeoBundle.lock[J
+2.04855394363403: continuing in function neobundle#commands#check..neobundle#installer#get_reinstall_bundles..neobundle#installer#_load_install_info..<SNR>19_source_lockfile[J
+2.04886198043823: Searching for "colors/base16-default.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04894590377808: Searching for "/home/carnager/.vim/colors/base16-default.vim"[J
+2.04897093772888: chdir(/home/carnager/.vim/colors)[J
+2.04899597167969: fchdir() to previous dir[J
+2.04925298690796: line 49: sourcing "/home/carnager/.vim/colors/base16-default.vim"[J
+2.04963088035583: Searching for "syntax/syncolor.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.04967403411865: Searching for "/home/carnager/.vim/syntax/syncolor.vim"[J
+2.04973387718201: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/syntax/syncolor.vim"[J
+2.04980397224426: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/syntax/syncolor.vim"[J
+2.0498640537262: Searching for "/home/carnager/.vim/bundle/vim-surround/syntax/syncolor.vim"[J
+2.04992198944092: Searching for "/home/carnager/.vim/bundle/vim-bling/syntax/syncolor.vim"[J
+2.04998397827148: Searching for "/home/carnager/.vim/bundle/vim-easymotion/syntax/syncolor.vim"[J
+2.05004405975342: Searching for "/home/carnager/.vim/bundle/ultisnips/syntax/syncolor.vim"[J
+2.05010390281677: Searching for "/home/carnager/.vim/bundle/.neobundle/syntax/syncolor.vim"[J
+2.05014991760254: Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"[J
+2.0502028465271: Searching for "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.05022788047791: chdir(/usr/share/vim/vim74/syntax)[J
+2.05025291442871: fchdir() to previous dir[J
+2.05050587654114: line 61: sourcing "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.05054998397827: finished sourcing /usr/share/vim/vim74/syntax/syncolor.vim[J
+2.05061197280884: continuing in /home/carnager/git/dotfiles/.vim/colors/base16-default.vim[J
+2.05066800117493: Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"[J
+2.05071997642517: Searching for "/home/carnager/.vim/after/syntax/syncolor.vim"[J
+2.05078506469727: Searching for "/home/carnager/.vim/bundle/neobundle.vim/syntax/syncolor.vim"[J
+2.05085682868958: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/syntax/syncolor.vim"[J
+2.05678701400757: Searching for "/home/carnager/.vim/bundle/ultisnips/after/syntax/syncolor.vim"[J
+2.05682802200317: finished sourcing /home/carnager/.vim/colors/base16-default.vim[J
+2.05688095092773: continuing in /home/carnager/.vimrc[J
+2.05690693855286: chdir(/usr/share/vim/vim74/syntax)[J
+2.05693387985229: fchdir() to previous dir[J
+2.0570068359375: line 54: sourcing "/usr/share/vim/vim74/syntax/syntax.vim"[J
+2.0574209690094: Searching for "syntax/synload.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.05746793746948: Searching for "/home/carnager/.vim/syntax/synload.vim"[J
+2.05752897262573: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/syntax/synload.vim"[J
+2.05759501457214: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/syntax/synload.vim"[J
+2.0576548576355: Searching for "/home/carnager/.vim/bundle/vim-surround/syntax/synload.vim"[J
+2.0577118396759: Searching for "/home/carnager/.vim/bundle/vim-bling/syntax/synload.vim"[J
+2.05777192115784: Searching for "/home/carnager/.vim/bundle/vim-easymotion/syntax/synload.vim"[J
+2.05782985687256: Searching for "/home/carnager/.vim/bundle/ultisnips/syntax/synload.vim"[J
+2.05788898468018: Searching for "/home/carnager/.vim/bundle/.neobundle/syntax/synload.vim"[J
+2.05793285369873: Searching for "/usr/share/vim/vimfiles/syntax/synload.vim"[J
+2.05798006057739: Searching for "/usr/share/vim/vim74/syntax/synload.vim"[J
+2.05800604820251: chdir(/usr/share/vim/vim74/syntax)[J
+2.05803084373474: fchdir() to previous dir[J
+2.05810785293579: line 19: sourcing "/usr/share/vim/vim74/syntax/synload.vim"[J
+2.05854296684265: Searching for "colors/base16-default.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.05859899520874: Searching for "/home/carnager/.vim/colors/base16-default.vim"[J
+2.05862498283386: chdir(/home/carnager/.vim/colors)[J
+2.05865097045898: fchdir() to previous dir[J
+2.0589120388031: line 19: sourcing "/home/carnager/.vim/colors/base16-default.vim"[J
+2.05934500694275: Searching for "syntax/syncolor.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.05940699577332: Searching for "/home/carnager/.vim/syntax/syncolor.vim"[J
+2.05948686599731: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/syntax/syncolor.vim"[J
+2.05954599380493: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/syntax/syncolor.vim"[J
+2.05960702896118: Searching for "/home/carnager/.vim/bundle/vim-surround/syntax/syncolor.vim"[J
+2.05966901779175: Searching for "/home/carnager/.vim/bundle/vim-bling/syntax/syncolor.vim"[J
+2.0597288608551: Searching for "/home/carnager/.vim/bundle/vim-easymotion/syntax/syncolor.vim"[J
+2.05978584289551: Searching for "/home/carnager/.vim/bundle/ultisnips/syntax/syncolor.vim"[J
+2.05984091758728: Searching for "/home/carnager/.vim/bundle/.neobundle/syntax/syncolor.vim"[J
+2.05988883972168: Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"[J
+2.05993795394897: Searching for "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.05996489524841: chdir(/usr/share/vim/vim74/syntax)[J
+2.05999183654785: fchdir() to previous dir[J
+2.0602388381958: line 60: sourcing "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.06028389930725: finished sourcing /usr/share/vim/vim74/syntax/syncolor.vim[J
+2.06034183502197: continuing in /home/carnager/git/dotfiles/.vim/colors/base16-default.vim[J
+2.06039500236511: Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"[J
+2.06044483184814: Searching for "/home/carnager/.vim/after/syntax/syncolor.vim"[J
+2.06050801277161: Searching for "/home/carnager/.vim/bundle/neobundle.vim/syntax/syncolor.vim"[J
+2.06058382987976: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/syntax/syncolor.vim"[J
+2.0607168674469: Searching for "/home/carnager/.vim/bundle/ultisnips/after/syntax/syncolor.vim"[J
+2.0611400604248: Searching for "syntax/syncolor.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.06118202209473: Searching for "/home/carnager/.vim/syntax/syncolor.vim"[J
+2.06123995780945: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/syntax/syncolor.vim"[J
+2.06130790710449: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/syntax/syncolor.vim"[J
+2.06136989593506: Searching for "/home/carnager/.vim/bundle/vim-surround/syntax/syncolor.vim"[J
+2.06142997741699: Searching for "/home/carnager/.vim/bundle/vim-bling/syntax/syncolor.vim"[J
+2.06149196624756: Searching for "/home/carnager/.vim/bundle/vim-easymotion/syntax/syncolor.vim"[J
+2.06154894828796: Searching for "/home/carnager/.vim/bundle/ultisnips/syntax/syncolor.vim"[J
+2.06160593032837: Searching for "/home/carnager/.vim/bundle/.neobundle/syntax/syncolor.vim"[J
+2.06165194511414: Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"[J
+2.06170392036438: Searching for "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.06172895431519: chdir(/usr/share/vim/vim74/syntax)[J
+2.06175398826599: fchdir() to previous dir[J
+2.06200504302979: line 61: sourcing "/usr/share/vim/vim74/syntax/syncolor.vim"[J
+2.06204700469971: finished sourcing /usr/share/vim/vim74/syntax/syncolor.vim[J
+2.06210994720459: continuing in /home/carnager/git/dotfiles/.vim/colors/base16-default.vim[J
+2.06216382980347: Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"[J
+2.06222891807556: Searching for "/home/carnager/.vim/after/syntax/syncolor.vim"[J
+2.06228399276733: Searching for "/home/carnager/.vim/bundle/neobundle.vim/syntax/syncolor.vim"[J
+2.06235384941101: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/syntax/syncolor.vim"[J
+2.06838989257812: Searching for "/home/carnager/.vim/bundle/ultisnips/after/syntax/syncolor.vim"[J
+2.06843304634094: finished sourcing /home/carnager/.vim/colors/base16-default.vim[J
+2.06855702400208: continuing in /usr/share/vim/vim74/syntax/synload.vim[J
+2.06859588623047: finished sourcing /usr/share/vim/vim74/syntax/synload.vim[J
+2.06866693496704: continuing in /usr/share/vim/vim74/syntax/syntax.vim[J
+2.06870603561401: finished sourcing /usr/share/vim/vim74/syntax/syntax.vim[J
+2.06874489784241: continuing in /home/carnager/.vimrc[J
+2.06911683082581: Searching for "filetype.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.06915593147278: Searching for "/home/carnager/.vim/filetype.vim"[J
+2.06920385360718: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/filetype.vim"[J
+2.06926584243774: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/filetype.vim"[J
+2.06932401657104: Searching for "/home/carnager/.vim/bundle/vim-surround/filetype.vim"[J
+2.06937694549561: Searching for "/home/carnager/.vim/bundle/vim-bling/filetype.vim"[J
+2.06943297386169: Searching for "/home/carnager/.vim/bundle/vim-easymotion/filetype.vim"[J
+2.06948590278625: Searching for "/home/carnager/.vim/bundle/ultisnips/filetype.vim"[J
+2.06953692436218: Searching for "/home/carnager/.vim/bundle/.neobundle/filetype.vim"[J
+2.06958985328674: Searching for "/usr/share/vim/vimfiles/filetype.vim"[J
+2.06963086128235: Searching for "/usr/share/vim/vim74/filetype.vim"[J
+2.06965088844299: chdir(/usr/share/vim/vim74)[J
+2.06967687606812: fchdir() to previous dir[J
+2.06973505020142: line 57: sourcing "/usr/share/vim/vim74/filetype.vim"[J
+2.06977295875549: finished sourcing /usr/share/vim/vim74/filetype.vim[J
+2.06980395317078: continuing in /home/carnager/.vimrc[J
+2.06985187530518: Searching for "/usr/share/vim/vimfiles/after/filetype.vim"[J
+2.06989598274231: Searching for "/home/carnager/.vim/after/filetype.vim"[J
+2.06995296478271: Searching for "/home/carnager/.vim/bundle/neobundle.vim/filetype.vim"[J
+2.07002091407776: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/after/filetype.vim"[J
+2.07007789611816: Searching for "/home/carnager/.vim/bundle/ultisnips/after/filetype.vim"[J
+2.07048201560974: Searching for "ftplugin.vim" in "/home/carnager/.vim,/home/carnager/.vim/bundle/ctrlp.vim/,/home/carnager/.vim/bundle/ctrlp-extensions.vim/,/home/carnager/.vim/bundle/vim-surround/,/home/carnager/.vim/bundle/vim-bling/,/home/carnager/.vim/bundle/vim-easymotion/,/home/carnager/.vim/bundle/ultisnips/,/home/carnager/.vim/bundle/.neobundle,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/carnager/.vim/after,/home/carnager/.vim/bundle/neobundle.vim,/home/carnager/.vim/bundle/ctrlp-extensions.vim/after,/home/carnager/.vim/bundle/ultisnips/after"[J
+2.07052087783813: Searching for "/home/carnager/.vim/ftplugin.vim"[J
+2.07057189941406: Searching for "/home/carnager/.vim/bundle/ctrlp.vim/ftplugin.vim"[J
+2.07062888145447: Searching for "/home/carnager/.vim/bundle/ctrlp-extensions.vim/ftplugin.vim"[J
+2.07068490982056: Searching for "/home/carnager/.vim/bundle/vim-surround/ftplugin.vim"[J
+2.07073593139648: Searching for "/home/carnager/.vim/bundle/vim-bling/ftplugin.vim"[J
+2.07079195976257: Searching for "/home/carnager/.vim/bundle/vim-easymotion/ftplugin.vim"[J
+2.07084488868713: Searching for "/home/carnager/.vim/bundle/ultisnips/ftplugin.vim"[J
+2
