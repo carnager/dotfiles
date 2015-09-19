@@ -3,18 +3,12 @@ backend=rofi
 
 # custom rofi settings (rofi reads settings from ~/.Xresources)
 # but you can override settings here.
-rofiopts="-width 1500 -lines 30 -i -no-levenshtein-sort"
+rofiopts="-line-margin 3 -width 1500 -lines 32 -i -no-levenshtein-sort"
 
-# If you don't have physical access to your music_dir
-# set this to no. This setting will make sure that ratings files
-# will be copied to their associated album
-music_dir_access=yes
-
-# path to your music
-music_path="/mnt/wasteland/Audio/Rips"
-
-# mpd socket file (for local filebrowser)
-#mpd_socket=/path/to/mpd/socket
+# custom mpd host
+mpd_host=
+mpd_port=
+mpd_password=
 
 # Number of Songs to be added for "Random Tracks"
 value=20
@@ -24,11 +18,6 @@ stop_after_suspend=no
 
 # instantly play newly added tracks
 add_auto_play=no
-
-# Separator used for splitting tags - Make sure this is something most
-# likely not used in tags itself. Can be multiple characters
-# If you change separator, update caches with clerk -update
-separator=" • "
 
 # use artist or albumartist for random tracks
 random_artist=albumartist
@@ -43,6 +32,7 @@ ssh_host=tauron
 
 # color of the help messages
 help_color="#0C73C2"
+help_separator_color="#5F5F5F"
 
 # custom keybindings
 # global
@@ -57,26 +47,26 @@ replace="Alt+3"
 rate="Alt+r"
 addplay="Alt+4"
 insertplay="Alt+5"
+savefav="Alt+s"
 
 # playback controls
-toggle="Alt+1"
-prev="Alt+2"
-next="Alt+3"
-stop="Alt+4"
+toggle="Alt+F6"
+prev="Alt+F5"
+next="Alt+F8"
+stop="Alt+F7"
+seek="Alt+f"
 
 # playlist menu
 delete="Alt+Delete"
 crop="Alt+x"
 clear="Alt+c"
-suspend="Alt+9"
-resume="Alt+0"
 movedown="Alt+Down"
 moveup="Alt+Up"
-goalbum="Alt+F5"
-gotrack="Alt+F6"
-load="Alt+l"
-loadrss="Alt+Control+l"
-save="Alt+s"
+goalbum="Alt+a"
+gotrack="Alt+t"
+playlist="Alt+p"
+nextalbum="Alt+Shift+F8"
+prevalbum="Alt+Shift+F5"
 
 # table customization
 track_width="2"
@@ -85,3 +75,6 @@ artist_width="40"
 date_width="6"
 # album is much longer in order to keep filename off screen
 album_width="200"
+
+pl_title_width="110"
+pl_artist_width="40"

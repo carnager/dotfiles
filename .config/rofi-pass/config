@@ -2,18 +2,21 @@
 # root=~/.password-store
 
 # optional rofi parameters:
-rofiopts="-width 40 -i -no-levenshtein-sort"
+rofiopts="-width 800 -i -no-levenshtein-sort"
 
 
 # fields to be used
 URL_field='URL'
-USERNAME_field='UserName'
+USERNAME_field='user'
 AUTOTYPE_field='autotype'
 
 ## Programs to be used
 # Editor
 # 
 EDITOR='gvim -f'
+
+# delay to be used for :delay keyword
+delay=1
 
 # Browser
 BROWSER='chromium'
@@ -34,9 +37,9 @@ open_url="Alt+4"
 copy_name="Alt+u"
 copy_url="Alt+l"
 copy_pass="Alt+p"
-edit="Alt+1"
-move="Alt+2"
-delete="Alt+3"
-show="Control+Return"
+edit="Alt+e"
+move="Alt+m"
+delete="Alt+Delete"
+show="Alt+Return"
 copy_entry="Alt+2"
 type_entry="Alt+1"

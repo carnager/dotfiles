@@ -4,7 +4,7 @@
 
 slop_border=1
 slop_color="255,0,0"
-hidecursor=yes
+hidecursor=no
 
 # the path where images, videos and pastes should be saved
 img_path=$HOME/Pictures/Screenshots

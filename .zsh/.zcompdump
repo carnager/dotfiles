@@ -1,4 +1,4 @@
-#files: 627	version: 5.0.8
+#files: 636	version: 5.1.1
 
 _comps=(
 '-' '_precommand'
@@ -48,6 +48,7 @@ _comps=(
 'bash' '_sh'
 'batch' '_at'
 'baz' '_baz'
+'_beep' '_beep'
 'bg' '_jobs_bg'
 'bindkey' '_bindkey'
 'bison' '_bison'
@@ -127,11 +128,13 @@ _comps=(
 'co' '_rcs'
 'comb' '_sccs'
 'combine' '_imagemagick'
+'combinediff' '_patchutils'
 'comm' '_comm'
 'command' '_command'
 '-command-' '_autocd'
 '-command-line-' '_normal'
 'comp' '_mh'
+'compadd' '_compadd'
 'compdef' '_compdef'
 'composite' '_imagemagick'
 'compress' '_compress'
@@ -227,7 +230,6 @@ _comps=(
 'evim' '_vim'
 'evince' '_pspdf'
 'exec' '_precommand'
-'exim' '_vim'
 'export' '_typeset'
 'express' '_webbrowser'
 'extcheck' '_java'
@@ -243,6 +245,7 @@ _comps=(
 'fg' '_jobs_fg'
 'fgrep' '_grep'
 'figlet' '_figlet'
+'filterdiff' '_patchutils'
 'find' '_find'
 'findaffix' '_ispell'
 'finger' '_finger'
@@ -260,14 +263,18 @@ _comps=(
 'fixwwps' '_psutils'
 'flasher' '_flasher'
 'flex' '_flex'
+'flipdiff' '_patchutils'
 'flist' '_mh'
 'flists' '_mh'
 'float' '_typeset'
+'fmttest' '_mh'
 'fned' '_zed'
+'fnext' '_mh'
 'folder' '_mh'
 'folders' '_mh'
 'fortune' '_fortune'
 'forw' '_mh'
+'fprev' '_mh'
 'freebsd-make' '_make'
 'fsh' '_fsh'
 'ftp' '_hosts'
@@ -346,6 +353,7 @@ _comps=(
 'gradlew' '_gradle'
 'grail' '_webbrowser'
 'grep' '_grep'
+'grepdiff' '_patchutils'
 'grm' '_rm'
 'groff' '_groff'
 'groupadd' '_user_admin'
@@ -426,6 +434,7 @@ _comps=(
 'insmod' '_modutils'
 'install-info' '_texinfo'
 'integer' '_typeset'
+'interdiff' '_patchutils'
 'ionice' '_ionice'
 'ip' '_ip'
 'ipset' '_ipset'
@@ -497,6 +506,7 @@ _comps=(
 'lprm' '_lp'
 'lpstat' '_lp'
 'ls' '_ls'
+'lsdiff' '_patchutils'
 'lsinitcpio' '_mkinitcpio'
 'lsmod' '_modutils'
 'lsof' '_lsof'
@@ -533,6 +543,7 @@ _comps=(
 'metaflac' '_metaflac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
+'mhfixmsg' '_mh'
 'mhlist' '_mh'
 'mhmail' '_mh'
 'mhn' '_mh'
@@ -578,6 +589,7 @@ _comps=(
 'mtr' '_mtr'
 'mtype' '_mtools'
 'munchlist' '_ispell'
+'mupdf' '_pdf'
 'mush' '_mail'
 'mutt' '_mutt'
 'mx' '_hosts'
@@ -599,6 +611,7 @@ _comps=(
 'netcat' '_netcat'
 'netrik' '_webbrowser'
 'netscape' '_netscape'
+'new' '_mh'
 'newgrp' '_groups'
 'next' '_mh'
 'nice' '_nice'
@@ -668,6 +681,7 @@ _comps=(
 'pgrep' '_pgrep'
 'php' '_php'
 'pick' '_mh'
+'pigz' '_gzip'
 'pine' '_pine'
 'pinef' '_pine'
 'ping' '_ping'
@@ -842,6 +856,7 @@ _comps=(
 'sortm' '_mh'
 'source' '_source'
 'spamassassin' '_spamassassin'
+'splitdiff' '_patchutils'
 'sqlite' '_sqlite'
 'sqlite3' '_sqlite'
 'sqsh' '_sqsh'
@@ -861,6 +876,7 @@ _comps=(
 'stg' '_stgit'
 'stop' '_initctl'
 'strace' '_strace'
+'strftime' '_strftime'
 'strip' '_strip'
 'stty' '_stty'
 'su' '_su'
@@ -963,9 +979,11 @@ _comps=(
 'unlimit' '_limits'
 'unlzma' '_xz'
 'unpack' '_pack'
+'unpigz' '_gzip'
 'unrar' '_rar'
 'unset' '_vars'
 'unsetopt' '_setopt'
+'unwrapdiff' '_patchutils'
 'unxz' '_xz'
 'unzip' '_zip'
 'urxvt' '_urxvt'
@@ -1034,6 +1052,7 @@ _comps=(
 'vcsh' '_vcsh'
 'vim' '_vim'
 'vimdiff' '_vim'
+'vmstat' '_vmstat'
 'vncserver' '_vnc'
 'vncviewer' '_vnc'
 'vorbiscomment' '_vorbiscomment'
@@ -1042,6 +1061,7 @@ _comps=(
 'vuxctl' '_vux'
 'w3m' '_w3m'
 'wait' '_wait'
+'watch' '_watch'
 'wc' '_wc'
 'wget' '_wget'
 'what' '_sccs'
@@ -1272,122 +1292,73 @@ autoload -Uz _7slash _a2ps _aap _acpi _acpitool \
             _antiword _apachectl _apm _approximate _arch_archives \
             _arch_namespace _arg_compile _arguments _arp _arping \
             _arrays _assign _at _attr _augeas \
-            _autocd _awk _bash_completions _baz _bind_addresses \
-            _bindkey _bison _bittorrent _bogofilter _bootctl \
-            _bpython _brace_parameter _brctl _btrfs _builtin \
-            _busctl _bzip2 _bzr _cabal _cache_invalid \
-            _cal _calendar _call_function _call_whatis _canonical_paths \
-            _cat _ccal _cd _cdcd _cd_options \
-            _cdr _cdrdao _cdrecord _cdsitepackages_complete _cdvirtualenv_complete \
-            _chkconfig _chmod _chown _chrt _chsh \
-            _clay _cmdstring _cmp _cmus _combination \
-            _comm _command _command_names _compdef _complete \
-            _complete_debug _complete_help _complete_help_generic _complete_tag _comp_locale \
-            _compress _condition _configure _coredumpctl _correct \
-            _correct_filename _correct_word _cower _cowsay _cp \
-            _cpio _cplay _cryptsetup _cssh _ctags_tags \
-            _cut _cvs _darcs _date _dbus \
-            _dcop _dd _default _delimiters _describe \
-            _description _devtodo _df _dhclient _dict \
-            _dict_words _diff _diff_options _diffstat _directories \
-            _directory_stack _dir_list _dirs _disable _dispatch \
-            _django _dmidecode _domains _dsh _du \
-            _dvi _dynamic_directory_name _ecasound _echotc _echoti \
-            _elfdump _elinks _elm _email_addresses _emulate \
-            _enable _enscript _env _envoy _equal \
-            _espeak _etags _ethtool _expand _expand_alias \
-            _expand_word _extensions _external_pwds _fakeroot _fasd_preexec \
-            _fasd_zsh_cmd_complete _fasd_zsh_word_complete _fasd_zsh_word_complete_d _fasd_zsh_word_complete_f _fasd_zsh_word_complete_trigger \
-            _fc _feh _fetchmail _ffmpeg _figlet \
-            _file_descriptors _files _file_systems _find _find_net_interfaces \
-            _finger _first _flasher _flex _fortune \
-            _fsh _functions _fuse_arguments _fuser _fusermount \
-            _fuse_values _gcc _gcore _gdb _generic \
-            _genisoimage _getconf _getent _getfacl _getmail \
-            _git _git-add __git_aliases _git-am __git_any_repositories \
-            _git-apply _git-applymbox __git_apply_whitespace_strategies _git-archimport _git-archive \
-            __git_archive_formats __git_attributes _git-bisect _git-blame __git_blob_objects \
-            __git_blobs __git_blobs_and_trees_in_treeish __git_blob_tags _git-branch __git_branch_names \
-            __git_browsers __git_builtin_merge_drivers _git-bundle __git_cached_files _git-cat-file \
-            __git_changed_files __git_changed-in-index_files __git_changed-in-working-tree_files _git-check-attr _git-check-ignore \
-            _git-check-mailmap _git-checkout _git-checkout-index _git-check-ref-format _git-cherry \
-            _git-cherry-pick _git-citool _git-clean _git-clone __git_color_attributes \
-            __git_colors __git_color_whens _git-column _git_commands __git_command_successful \
-            _git-commit __git_commit_objects __git_commit_objects_prefer_recent __git_commit_ranges __git_commit_ranges2 \
-            __git_commits __git_commits2 __git_commit_tags __git_committish_range_first __git_committish_range_last \
-            __git_committishs _git-commit-tree __git_compression_levels _git-config __git_config_booleans \
-            __git_config_get_regexp __git_config_sections __git_config_values _git-count-objects _git-cvsexportcommit \
-            _git-cvsimport _git-cvsserver _git-daemon __git_daemon_service __git_date_formats \
-            __git_datetimes __git_deleted_files _git-describe _git-diff _git-diff-files \
-            _git-diff-index __git_diff-or-merge-tools _git-difftool __git_difftools _git-diff-tree \
-            __git_encodings __git_extract_aliases _git-fast-export _git-fast-import _git-fetch \
-            _git-fetch-pack __git_files __git_files_relative _git-filter-branch _git-fmt-merge-msg \
-            _git-for-each-ref _git-format-patch _git-fsck _git-gc _git-get-tar-commit-id \
-            __git_gpg_secret_keys _git-grep __git_guard __git_guard_branch-name __git_guard_bytes \
-            __git_guard_diff-stat-width __git_guard_number _git-gui _git-hash-object __git_heads \
-            __git_heads_local __git_heads_remote _git-help _git-http-backend _git-http-fetch \
-            _git-http-push __git_ignored_cached_files __git_ignored_other_files __git_ignore_line __git_ignore_line_inside_arguments \
-            __git_ignore_submodules_whens _git-imap-send _git-index-pack _git-init _git-instaweb \
-            __git_is_blob __git_is_committish __git_is_committish_range __git_is_initial_commit __git_is_in_middle_of_merge \
-            __git_is_treeish __git_is_type _gitk __git_killed_files __git_local_references \
-            __git_local_repositories _git-log __git_log_decorate_formats _git-ls-files _git-ls-remote \
-            _git-ls-tree _git-mailinfo _git-mailsplit __git_man_viewers _git-merge \
-            _git-merge-base __git_merge_drivers _git-merge-file _git-merge-index _git-merge-one-file \
-            __git_merge_strategies _git-mergetool __git_mergetools _git-merge-tree _git-mktag \
-            _git-mktree __git_modified_files _git-mv _git-name-rev _git-notes \
-            __git_notes_refs __git_objects __git_other_files _git-pack-objects _git-pack-redundant \
-            _git-pack-refs _git-patch-id __git_pattern_escape _git-prune _git-prune-packed \
-            _git-pull _git-push _git-quiltimport _git-read-tree _git-rebase \
-            _git-receive-pack __git_recent_commits __git_references _git-reflog __git_reflog_entries \
-            __git_ref_sort_keys __git_ref_specs _git-relink _git-remote __git_remote_branch_names \
-            __git_remote_branch_names_noprefix __git_remote-groups __git_remote_references __git_remote_repositories __git_remotes \
-            __git_remotes_groups _git-repack _git-replace __git_repositories __git_repository_permissions \
-            _git-request-pull _git-rerere _git-reset _git-revert __git_revisions \
-            _git-rev-list _git-rev-parse _git-rm _git-send-email __git_sendemail_confirm_values \
-            __git_sendemail_identities __git_sendemail_smtpencryption_values __git_sendemail_suppresscc_values _git-send-pack __git_setup_apply_options \
-            __git_setup_diff_options __git_setup_diff_stage_options __git_setup_fetch_options __git_setup_log_options __git_setup_merge_options \
-            __git_setup_revision_options _git-shell _git-shortlog _git-show _git-show-branch \
-            _git-show-index _git-show-ref __git_signoff_file __git_stages _git-stash \
-            __git_stashes _git-status _git-stripspace _git-submodule __git_submodules \
-            _git-svn __git_svn_base_revisions __git_svn-remotes __git_svn_revision_numbers __git_svn_revisions \
-            _git-symbolic-ref _git-tag __git_tags __git_tags_of_type __git_tree_files \
-            __git_tree_ishs __git_trees __git_unmerged_files _git-unpack-file _git-unpack-objects \
-            _git-update-index _git-update-ref _git-update-server-info _git-upload-archive _git-upload-pack \
-            _git-var _git-verify-commit _git-verify-pack _git-verify-tag _git-whatchanged \
-            _git-write-tree _global _global_tags _globflags _globqual_delims \
-            _globquals _gnome-gv _gnu_generic _gnupod _gnutls \
-            _go _gpg _gphoto2 _gprof _gqview \
-            _gradle _graphicsmagick _grep _groff _groups \
-            _growisofs _gs _guard _guilt _gv \
-            _gzip _hash _have_glob_qual _hg _history \
-            _history_complete_word _history_modifiers _hostnamectl _hosts _iconv \
-            _id _ifconfig _iftop _ignored _imagemagick \
-            _initctl _init_d _in_vared _ionice _ip \
-            _ipset _iptables _irssi _ispell _iwconfig \
-            _j _java _java_class _jobs _jobs_bg \
-            _jobs_builtin _jobs_fg _joe _join _journalctl \
-            _kernel-install _kfmclient _kill _killall _knock \
-            _kvno _last _ldd _ld_debug _less \
-            _lha _limit _limits _links _list \
-            _list_files _ln _loadkeys _localectl _locales \
-            _locate _loginctl _look _losetup _lp \
-            _ls _lsof _lsusb _lsvirtualenv_usage _lynx \
-            _lzop _machinectl _mail _mailboxes _main_complete \
-            _make _man _match _math _math_params \
-            _matlab _md5sum _mdadm _mencal _menu \
-            _mere _message _metaflac _mh _mii-tool \
-            _mime_types _mkdir _mkinitcpio _module _module_math_func \
-            _modutils _mondo _monotone _moosic _mosh \
-            _most_recent_file _mount _mozilla _mpc _mplayer \
-            _mpv _mt _mtools _mtr _multi_parts \
-            _mutt _my_accounts _mysqldiff _mysql_utils _nautilus \
-            _ncftp _nedit _netcat _net_interfaces _netscape \
-            _newsgroups _next_label _next_tags _nice _nkf \
-            _nl _nm _nmap _nmcli _normal \
-            _nothing _notmuch _npm _nslookup _od \
-            _okular _oldlist _options _options_set _options_unset \
-            _other_accounts _pacaur _pack _pacman _parameter \
-            _parameters _pass _patch _path_commands _path_commands_caching_policy \
+            _autocd _awk _bash_completions _baz _beep \
+            _bind_addresses _bindkey _bison _bittorrent _bogofilter \
+            _bootctl _bpython _brace_parameter _brctl _btrfs \
+            _builtin _busctl _bzip2 _bzr _cabal \
+            _cache_invalid _cal _calendar _call_function _call_whatis \
+            _canonical_paths _cat _ccal _cd _cdcd \
+            _cd_options _cdr _cdrdao _cdrecord _cdsitepackages_complete \
+            _cdvirtualenv_complete _chkconfig _chmod _chown _chrt \
+            _chsh _clay _cmdstring _cmp _cmus \
+            _combination _comm _command _command_names _compadd \
+            _compdef _complete _complete_debug _complete_help _complete_help_generic \
+            _complete_tag _comp_locale _compress _condition _configure \
+            _coredumpctl _correct _correct_filename _correct_word _cower \
+            _cowsay _cp _cpio _cplay _cryptsetup \
+            _cssh _ctags_tags _cut _cvs _darcs \
+            _date _date_formats _dates _dbus _dcop \
+            _dd _default _delimiters _describe _description \
+            _devtodo _df _dhclient _dict _dict_words \
+            _diff _diff_options _diffstat _directories _directory_stack \
+            _dir_list _dirs _disable _dispatch _django \
+            _dmidecode _domains _dsh _du _dvi \
+            _dynamic_directory_name _ecasound _echotc _echoti _elfdump \
+            _elinks _elm _email_addresses _emulate _enable \
+            _enscript _env _envoy _equal _espeak \
+            _etags _ethtool _expand _expand_alias _expand_word \
+            _extensions _external_pwds _fakeroot _fasd_preexec _fasd_zsh_cmd_complete \
+            _fasd_zsh_word_complete _fasd_zsh_word_complete_d _fasd_zsh_word_complete_f _fasd_zsh_word_complete_trigger _fc \
+            _feh _fetchmail _ffmpeg _figlet _file_descriptors \
+            _files _file_systems _find _find_net_interfaces _finger \
+            _first _flasher _flex _fortune _fsh \
+            _functions _fuse_arguments _fuser _fusermount _fuse_values \
+            _gcc _gcore _gdb _generic _genisoimage \
+            _getconf _getent _getfacl _getmail _git \
+            _global _global_tags _globflags _globqual_delims _globquals \
+            _gnome-gv _gnu_generic _gnupod _gnutls _go \
+            _gpg _gphoto2 _gprof _gqview _gradle \
+            _graphicsmagick _grep _groff _groups _growisofs \
+            _gs _guard _guilt _gv _gzip \
+            _hash _have_glob_qual _hg _history _history_complete_word \
+            _history_modifiers _hostnamectl _hosts _iconv _id \
+            _ifconfig _iftop _ignored _imagemagick _initctl \
+            _init_d _in_vared _ionice _ip _ipset \
+            _iptables _irssi _ispell _iwconfig _j \
+            _java _java_class _jobs _jobs_bg _jobs_builtin \
+            _jobs_fg _joe _join _journalctl _kernel-install \
+            _kfmclient _kill _killall _knock _kvno \
+            _last _ldd _ld_debug _less _lha \
+            _limit _limits _links _list _list_files \
+            _ln _loadkeys _localectl _locales _locate \
+            _loginctl _look _losetup _lp _ls \
+            _lsof _lsusb _lsvirtualenv_usage _lynx _lzop \
+            _machinectl _mail _mailboxes _main_complete _make \
+            _man _match _math _math_params _matlab \
+            _md5sum _mdadm _mencal _menu _mere \
+            _message _metaflac _mh _mii-tool _mime_types \
+            _mkdir _mkinitcpio _module _module_math_func _modutils \
+            _mondo _monotone _moosic _mosh _most_recent_file \
+            _mount _mozilla _mpc _mplayer _mpv \
+            _mt _mtools _mtr _multi_parts _mutt \
+            _my_accounts _mysqldiff _mysql_utils _nautilus _ncftp \
+            _nedit _netcat _net_interfaces _netscape _newsgroups \
+            _next_label _next_tags _nice _nkf _nl \
+            _nm _nmap _nmcli _normal _nothing \
+            _notmuch _npm _nslookup _od _okular \
+            _oldlist _options _options_set _options_unset _other_accounts \
+            _pacaur _pack _pacman _parameter _parameters \
+            _pass _patch _patchutils _path_commands _path_commands_caching_policy \
             _path_files _pax _pbm _pdf _pdftk \
             _perforce _perl _perl_basepods _perldoc _perl_modules \
             _pgrep _php _pick_variant _pids _pine \
@@ -1410,49 +1381,50 @@ autoload -Uz _7slash _a2ps _aap _acpi _acpitool \
             _sisu _slrn _socket _sort _source \
             _spamassassin _sqlite _sqsh _ss _ssh \
             _sshfs _stat _stgit _store_cache _strace \
-            _strip _stty _su _sub_commands _subscript \
-            _subversion _sudo _suffix_alias_files _surfraw _sysctl \
-            _sysstat _systemctl _systemd _systemd-analyze _systemd-delta \
-            _systemd-inhibit _systemd-nspawn _systemd-run _systemd-tmpfiles _tags \
-            _tar _tar_archive _tardy _tcpdump _tcpsys \
-            _tcptraceroute _telnet _terminals _tex _texi \
-            _texinfo _tidy _tiff _tig _tilde \
+            _strftime _strip _stty _su _sub_commands \
+            _subscript _subversion _sudo _suffix_alias_files _surfraw \
+            _sysctl _sysstat _systemctl _systemd _systemd-analyze \
+            _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-run _systemd-tmpfiles \
+            _tags _tar _tar_archive _tardy _tcpdump \
+            _tcpsys _tcptraceroute _telnet _terminals _tex \
+            _texi _texinfo _tidy _tiff _tilde \
             _tilde_files _timedatectl _time_zone _tin _tla \
             _tmux _todo.sh _toilet _topgit _totd \
             _tpb _tpconfig _tracepath _trap _tree \
-            _ttyctl _tune2fs _twidge _twisted _typeset \
-            _udevadm _ulimit _uml _unace _uname \
-            _unexpand _unhash _uniq _unison _units \
-            _urls _urxvt _user_admin _user_at_host _user_expand \
-            _user_math_func _users _users_on _uzbl _valgrind \
-            _value _values _vared _vars _vcsh \
-            _vim _vim_files _virtualenvs _vnc _vorbis \
-            _vorbiscomment _vserver _vux _w3m _wait \
-            _wakeup_capable_devices _wanted _wc _webbrowser _wget \
-            _whereis _which _whois _wiggle _wpa_cli \
-            _xargs _x_arguments _xauth _xautolock _x_borderwidth \
-            _xclip _x_color _x_colormapid _x_cursor _x_display \
-            _xdvi _x_extension _xfig _x_font _xft_fonts \
-            _x_geometry _x_keysym _xloadimage _x_locale _xmlsoft \
-            _xmms2 _x_modifier _xmodmap _x_name _xournal \
-            _xpdf _xrandr _x_resource _xscreensaver _x_selection_timeout \
-            _xset _xt_arguments _xterm _x_title _xt_session_id \
-            _x_utils _xv _x_visual _x_window _xwit \
-            _xxd _xz _yodl _youtube-dl _yp \
-            _zargs _zattr _zcalc _zcalc_line _zcat \
-            _zcompile _zdump _zed _zfs _zfs_dataset \
-            _zfs_keysource_props _zfs_pool _zftp _zip _zle \
-            _zmodload _zmv _zpool _zpty _zsh_highlight \
-            _zsh_highlight_bind_widgets _zsh_highlight_brackets_highlighter _zsh_highlight_brackets_highlighter_brackettype _zsh_highlight_brackets_highlighter_predicate _zsh_highlight_buffer_modified \
-            _zsh_highlight_cursor_highlighter _zsh_highlight_cursor_highlighter_predicate _zsh_highlight_cursor_moved _zsh_highlight_line_highlighter _zsh_highlight_line_highlighter_predicate \
-            _zsh_highlight_load_highlighters _zsh_highlight_main_highlighter _zsh_highlight_main_highlighter_check_assign _zsh_highlight_main_highlighter_check_path _zsh_highlight_main_highlighter_highlight_string \
-            _zsh_highlight_main_highlighter_predicate _zsh_highlight_pattern_highlighter _zsh_highlight_pattern_highlighter_loop _zsh_highlight_pattern_highlighter_predicate _zsh_highlight_preexec_hook \
-            _zsh_highlight_root_highlighter _zsh_highlight_root_highlighter_predicate _zsh_highlight_widget_accept-and-hold _zsh_highlight_widget_accept-and-infer-next-history _zsh_highlight_widget_accept-and-menu-complete \
-            _zsh_highlight_widget_accept-line _zsh_highlight_widget_accept-line-and-down-history _zsh_highlight_widget_accept-search _zsh_highlight_widget_argument-base _zsh_highlight_widget_auto-suffix-remove \
-            _zsh_highlight_widget_auto-suffix-retain _zsh_highlight_widget_backward-char _zsh_highlight_widget_backward-delete-char _zsh_highlight_widget_backward-delete-word _zsh_highlight_widget_backward-kill-line \
-            _zsh_highlight_widget_backward-kill-word _zsh_highlight_widget_backward-word _zsh_highlight_widget_beginning-of-buffer-or-history _zsh_highlight_widget_beginning-of-history _zsh_highlight_widget_beginning-of-line \
-            _zsh_highlight_widget_beginning-of-line-hist _zsh_highlight_widget_capitalize-word _zsh_highlight_widget_clear-screen _zsh_highlight_widget_complete-word _zsh_highlight_widget_copy-prev-shell-word \
-            _zsh_highlight_widget_copy-prev-word _zsh_highlight_widget_copy-region-as-kill _zsh_highlight_widget_delete-char _zsh_highlight_widget_delete-char-or-list _zsh_highlight_widget_delete-word \
+            _ttyctl _ttys _tune2fs _twidge _twisted \
+            _typeset _udevadm _ulimit _uml _unace \
+            _uname _unexpand _unhash _uniq _unison \
+            _units _urls _urxvt _user_admin _user_at_host \
+            _user_expand _user_math_func _users _users_on _uzbl \
+            _valgrind _value _values _vared _vars \
+            _vcsh _vim _vim_files _virtualenvs _vmstat \
+            _vnc _vorbis _vorbiscomment _vserver _vux \
+            _w3m _wait _wakeup_capable_devices _wanted _watch \
+            _wc _webbrowser _wget _whereis _which \
+            _whois _wiggle _wpa_cli _xargs _x_arguments \
+            _xauth _xautolock _x_borderwidth _xclip _x_color \
+            _x_colormapid _x_cursor _x_display _xdvi _x_extension \
+            _xfig _x_font _xft_fonts _x_geometry _x_keysym \
+            _xloadimage _x_locale _xmlsoft _xmms2 _x_modifier \
+            _xmodmap _x_name _xournal _xpdf _xrandr \
+            _x_resource _xscreensaver _x_selection_timeout _xset _xt_arguments \
+            _xterm _x_title _xt_session_id _x_utils _xv \
+            _x_visual _x_window _xwit _xxd _xz \
+            _yodl _youtube-dl _yp _zargs _zattr \
+            _zcalc _zcalc_line _zcat _zcompile _zdump \
+            _zed _zfs _zfs_dataset _zfs_keysource_props _zfs_pool \
+            _zftp _zip _zle _zmodload _zmv \
+            _zpool _zpty _zsh_highlight _zsh_highlight_bind_widgets _zsh_highlight_brackets_highlighter \
+            _zsh_highlight_brackets_highlighter_brackettype _zsh_highlight_brackets_highlighter_predicate _zsh_highlight_buffer_modified _zsh_highlight_cursor_highlighter _zsh_highlight_cursor_highlighter_predicate \
+            _zsh_highlight_cursor_moved _zsh_highlight_line_highlighter _zsh_highlight_line_highlighter_predicate _zsh_highlight_load_highlighters _zsh_highlight_main_highlighter \
+            _zsh_highlight_main_highlighter_check_assign _zsh_highlight_main_highlighter_check_path _zsh_highlight_main_highlighter_highlight_string _zsh_highlight_main_highlighter_predicate _zsh_highlight_pattern_highlighter \
+            _zsh_highlight_pattern_highlighter_loop _zsh_highlight_pattern_highlighter_predicate _zsh_highlight_preexec_hook _zsh_highlight_root_highlighter _zsh_highlight_root_highlighter_predicate \
+            _zsh_highlight_widget_accept-and-hold _zsh_highlight_widget_accept-and-infer-next-history _zsh_highlight_widget_accept-and-menu-complete _zsh_highlight_widget_accept-line _zsh_highlight_widget_accept-line-and-down-history \
+            _zsh_highlight_widget_accept-search _zsh_highlight_widget_argument-base _zsh_highlight_widget_auto-suffix-remove _zsh_highlight_widget_auto-suffix-retain _zsh_highlight_widget_backward-char \
+            _zsh_highlight_widget_backward-delete-char _zsh_highlight_widget_backward-delete-word _zsh_highlight_widget_backward-kill-line _zsh_highlight_widget_backward-kill-word _zsh_highlight_widget_backward-word \
+            _zsh_highlight_widget_beginning-of-buffer-or-history _zsh_highlight_widget_beginning-of-history _zsh_highlight_widget_beginning-of-line _zsh_highlight_widget_beginning-of-line-hist _zsh_highlight_widget_bracketed-paste \
+            _zsh_highlight_widget_capitalize-word _zsh_highlight_widget_clear-screen _zsh_highlight_widget_complete-word _zsh_highlight_widget_copy-prev-shell-word _zsh_highlight_widget_copy-prev-word \
+            _zsh_highlight_widget_copy-region-as-kill _zsh_highlight_widget_deactivate-region _zsh_highlight_widget_delete-char _zsh_highlight_widget_delete-char-or-list _zsh_highlight_widget_delete-word \
             _zsh_highlight_widget_describe-key-briefly _zsh_highlight_widget_digit-argument _zsh_highlight_widget_down-case-word _zsh_highlight_widget_down-history _zsh_highlight_widget_down-line \
             _zsh_highlight_widget_down-line-or-history _zsh_highlight_widget_down-line-or-search _zsh_highlight_widget_emacs-backward-word _zsh_highlight_widget_emacs-forward-word _zsh_highlight_widget_end-of-buffer-or-history \
             _zsh_highlight_widget_end-of-history _zsh_highlight_widget_end-of-line _zsh_highlight_widget_end-of-line-hist _zsh_highlight_widget_end-of-list _zsh_highlight_widget_exchange-point-and-mark \

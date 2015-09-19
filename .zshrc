@@ -374,3 +374,19 @@ eval "$(fasd --init auto)"
 alias v='f -e vim' # quick opening files with vim
 alias m='f -b current -e mpv' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
+
+
+base16_switch() {
+    BASE16_SHELL="$@"
+    [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+}
+
+vim() {
+if [[ "${BASE16_SHELL}" == *".light.sh" ]]; then
+    scheme=$(basename "$(echo "${BASE16_SHELL}")" | sed 's/.light.sh*//g')
+    /usr/bin/vim "+set background=light" "+colorscheme ${scheme}" "$@"
+elif [[ "${BASE16_SHELL}" == *".dark.sh" ]]; then
+    scheme=$(basename "$(echo "${BASE16_SHELL}")" | sed 's/.dark.sh*//g')
+    /usr/bin/vim "+colorscheme ${scheme}" "$@"
+fi
+}

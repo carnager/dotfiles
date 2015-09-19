@@ -37,8 +37,8 @@ bindsym $mod+Shift+Return exec --no-startup-id termite /bin/zsh termite -c ~/.co
 bindsym $mod+Shift+s exec --no-startup-id termite --role=ssh -e karif
 #teiler
 bindsym Print exec teiler
-bindsym Control+Print exec teiler --screenshot
-bindsym Shift+Print exec teiler --togglecast
+bindsym Control+Print exec --no-startup-id teiler --screenshot
+bindsym Shift+Print exec --no-startup-id teiler --togglecast
 bindsym --release $mod+Print exec --no-startup-id teiler --quick area
 bindsym Pause exec misc
 
