@@ -376,10 +376,12 @@ alias m='f -b current -e mpv' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
 
 
-base16_switch() {
+b16() {
     BASE16_SHELL="$@"
     [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 }
+
+compdef '_files -g "$HOME/bin/base16-shell/*"' b16
 
 vim() {
 if [[ "${BASE16_SHELL}" == *".light.sh" ]]; then
@@ -390,3 +392,5 @@ elif [[ "${BASE16_SHELL}" == *".dark.sh" ]]; then
     /usr/bin/vim "+colorscheme ${scheme}" "$@"
 fi
 }
+
+alias svim='sudoedit'
