@@ -82,6 +82,8 @@ p_white=$'%{\e[1;37m%}'
 # some better colors for ls
 eval "`dircolors ~/.dircolors`"
 
+
+#unset zle_bracketed_paste
 # }}}
 # Prompt {{{
 
@@ -334,7 +336,7 @@ keychain --quiet id_rsa
 #export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 pa-list() { pacmd list-sinks | awk '/index/ || /name:/' ;}
 pa-set() {
@@ -394,3 +396,4 @@ fi
 }
 
 alias svim='sudoedit'
+. /etc/profile.d/vte.sh
