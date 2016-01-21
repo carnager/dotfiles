@@ -12,6 +12,5 @@ while true; do
         echo "${playing}"
     fi
     mpc idle player > /dev/null
-    sleep 2
 done
 
