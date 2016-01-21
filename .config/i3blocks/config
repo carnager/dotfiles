@@ -1,12 +1,12 @@
-[mediaplayer]
-command=$HOME/.config/i3blocks/mediaplayer
+[mpd]
+command=$HOME/.config/i3blocks/mpc.sh
+interval=persist
 color=#F92672
-interval=1
 
-[scrobbling]
-command=$HOME/.config/i3blocks/lastfm.sh
-color=#FF0000
-interval=3
+#[scrobbling]
+#command=$HOME/.config/i3blocks/lastfm.sh
+#color=#FF0000
+#interval=3
 
 [mem]
 command=echo "RAM: $($HOME/.config/i3blocks/mem.sh)%"
@@ -19,14 +19,8 @@ command=echo " CPU: $($HOME/.config/i3blocks/cpu_load.sh)%"
 color=#FD971F
 interval=10
 
-[time1]
-command=nice -n +19 cat /tmp/__localtime
+[time]
+command=date +'%h-%d %H:%M'
 color=#BBE054
-interval=once
-signal=1
-
-#[time2]
-#command=date +'%h-%d %H:%M'
-#color=#BBE054
-#interval=10
+interval=10
 
