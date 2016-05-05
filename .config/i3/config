@@ -1,0 +1,173 @@
+# Variables
+set $workspace1 "1: "
+set $workspace2 "2: "
+set $workspace3 "3: "
+set $workspace4 "4: "
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+set $workspace9 "9: "
+
+
+# General Configuration
+set $mod Mod4
+font pango:Pragmata Pro 10
+floating_modifier $mod
+focus_follows_mouse no
+new_window pixel 5
+popup_during_fullscreen smart
+force_display_urgency_hint 500 ms
+
+
+# Window Manager Hotkeys
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+x move workspace to output right
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen
+bindsym $mod+k kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace NOTAG
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace NOTAG
+
+
+# Application Hotkeys
+bindsym $mod+Return exec --no-startup-id termite
+bindsym Print exec teiler
+bindsym Shift+Print exec --no-startup-id teiler --togglecast
+bindsym --release $mod+Print exec --no-startup-id teiler --quick area
+bindsym Pause exec misc
+bindsym $mod+F9 exec --no-startup-id robot
+bindsym $mod+Scroll_Lock exec --no-startup-id dofi
+bindsym $mod+Insert exec utf8
+bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
+### mpd keybindings
+bindsym $mod+F6 exec mpc toggle
+bindsym $mod+F7 exec mpc stop
+bindsym $mod+F8 exec mpc next
+bindsym $mod+F5 exec mpc prev
+bindsym Shift+$mod+F8 exec mpc seek +5
+bindsym Shift+$mod+F5 exec mpc seek -5
+bindsym $mod+F12 exec --no-startup-id clerk --lastfm toggle
+bindsym $mod+Shift+F1 exec --no-startup-id clerk
+bindsym $mod+Shift+F2 exec --no-startup-id clerk --add album
+bindsym $mod+Control+F2 exec --no-startup-id clerk --add track
+bindsym $mod+Shift+F3 exec --no-startup-id clerk --rate album
+bindsym $mod+Control+F3 exec --no-startup-id clerk --rate track
+bindsym $mod+Shift+F4 exec --no-startup-id clerk --random album
+bindsym $mod+Control+F4 exec --no-startup-id clerk --random track
+bindsym $mod+Control+F1 exec --no-startup-id clerk --current
+bindsym $mod+Control+F6 exec --no-startup-id clerk --queue show
+bindsym $mod+Control+F7 exec --no-startup-id clerk --queue delete
+bindsym $mod+Mod1+F4 exec --no-startup-id clerk --add latest
+bindsym $mod+Shift+F11 exec --no-startup-id rofi-pass
+bindsym $mod+Control+F11 exec --no-startup-id rofi-pass --last-used
+bindsym $mod+Escape exec --no-startup-id i3lock
+
+
+# Custom Modes
+mode "(E)xit, (R)eboot, (P)oweroff" {
+        bindsym r exec systemctl reboot
+        bindsym e exit
+        bindsym p exec systemctl poweroff
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+e mode "(E)xit, (R)eboot, (P)oweroff"
+
+mode "resize" {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym odiaeresis resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+# Bar Configuration
+
+bar {
+colors {
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #0C73C2 #0C73C2 #ffffff #000000
+        active_workspace   #0C73C2 #0C73C2 #ffffff #000000
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+}
+        status_command i3blocks -c $HOME/.config/i3blocks/config
+        position top
+        tray_output DP-1
+}
+
+client.focused            #0C73C2 #0C73C2 #ffffff #0C73C2
+client.background         #000000
+
+
+# rules
+assign [class="Aurora|Firefox|Navigator|Opera|chromium|dwb"] $workspace2
+assign [class="Spacefm"] $workspace3
+assign [class="Transmission-remote-gtk"] $workspace5
+assign [class="Spotify"] 4: $workspace4
+assign [class="Gimp"] $workspace6
+
+
+#window rules
+
+for_window [class="^xv|mplayer2|Steam|Wine|mpv|Qjackctl|Pavucontrol|Copyq|feh"] floating enable
+for_window [title="^PangoCairo*"] floating enable
+for_window [title="PlayOnLinux"] floating enable
+for_window [class="^.*"] border pixel 5
+for_window [class="Spotify"] move to workspace $workspace4
+
+
