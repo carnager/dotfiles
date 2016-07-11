@@ -16,15 +16,12 @@ compdef '_files -W '$HOME/bin/base16-shell/scripts' -g "*.sh"' b16
 # apply current base16 theme to vim
 vim() {
   scheme="$(basename ${BASE16_SHELL})"
+  scheme="${scheme%.sh}"
   if [[ "${scheme}" =~ "-light.sh" ]]; then
-    scheme="${scheme%.sh}"
     /usr/bin/vim "+set background=light" "+colorscheme ${scheme}" "$@"
   elif [[ "${scheme}" =~ "-dark.sh" ]]; then
-    scheme="${scheme%.sh}"
     /usr/bin/vim "+set background=dark" "+colorscheme ${scheme}" "$@"
   else
-    echo "${scheme}"
-    scheme="${scheme%.sh}"
     /usr/bin/vim "+colorscheme ${scheme}" "$@"
   fi
 }
