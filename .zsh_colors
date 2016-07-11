@@ -11,6 +11,7 @@ b16() {
     [[ -s $HOME/bin/base16-shell/scripts/$BASE16_SHELL ]] && source $HOME/bin/base16-shell/scripts/$BASE16_SHELL
 }
 
+# apply above function via compdef
 compdef '_files -W '$HOME/bin/base16-shell/scripts' -g "*.sh"' b16
 
 # apply current base16 theme to vim
