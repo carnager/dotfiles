@@ -38,7 +38,8 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '\ee' edit-command-line
 
-
+# show compose characters on tab complete
+setopt combiningchars
 
 # Colors {{{
 #use these in functions/shell scripts
@@ -83,7 +84,9 @@ p_white=$'%{\e[1;37m%}'
 eval "`dircolors ~/.dircolors`"
 
 
-#unset zle_bracketed_paste
+unset zle_bracketed_paste
+
+
 # }}}
 # Prompt {{{
 
@@ -101,14 +104,6 @@ local host_color=$p_GREEN
 local path_color=$p_BLUE
 PROMPT="${username_color}$USERNAME${p_nc}@${host_color}%m${p_nc} ${path_color}%~${p_nc} > "
 #}
-
-function _7slash {
-   if [[ $words[CURRENT] = 7(#b)(*)(#e) ]]
-   then
-     compadd -U -X 'Correct leading 7 to /' -f /$match[1]
-   fi
-}
-
 
 ## Spelling prompt
 SPROMPT='zsh: correct '%R' to '%r' ? ([Y]es/[N]o/[E]dit/[A]bort) '
@@ -217,7 +212,7 @@ zstyle ':completion:*' use-perl on
 # completion colours
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-zstyle ':completion:*' completer _complete _match _approximate _7slash
+zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 
 # allow more mistypes if longer command
@@ -326,14 +321,12 @@ zstyle ':completion:*:manuals.(^1*)' insert-sections   true
 
 #
 
-keychain --quiet id_rsa
-[ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
-[ -f $HOME/.keychain/$HOSTNAME-sh ] && \
-        . $HOME/.keychain/$HOSTNAME-sh
-[ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
-        . $HOME/.keychain/$HOSTNAME-sh-gpg
-#source $HOME/bin/gpg-agent.sh
-#export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+#eval $(keychain --quiet --agents ssh,gpg id_rsa 9BD55164)
+#[ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
+#[ -f $HOME/.keychain/$HOSTNAME-sh ] && \
+#        . $HOME/.keychain/$HOSTNAME-sh
+#[ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
+#        . $HOME/.keychain/$HOSTNAME-sh-gpg
 
 
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -369,31 +362,36 @@ sc () { echo $@ | socat - UNIX-CONNECT:/tmp/spotifyd 2>/dev/null; }
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
-# Base16 Shell
-BASE16_SHELL="$HOME/bin/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# fasd 
 eval "$(fasd --init auto)"
 alias v='f -e vim' # quick opening files with vim
 alias m='f -b current -e mpv' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
 
+# load colors
+source $HOME/.zsh_colors
 
-b16() {
-    BASE16_SHELL="$@"
-    [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-}
-
-compdef '_files -g "$HOME/bin/base16-shell/*"' b16
-
-vim() {
-if [[ "${BASE16_SHELL}" == *".light.sh" ]]; then
-    scheme=$(basename "$(echo "${BASE16_SHELL}")" | sed 's/.light.sh*//g')
-    /usr/bin/vim "+set background=light" "+colorscheme ${scheme}" "$@"
-elif [[ "${BASE16_SHELL}" == *".dark.sh" ]]; then
-    scheme=$(basename "$(echo "${BASE16_SHELL}")" | sed 's/.dark.sh*//g')
-    /usr/bin/vim "+colorscheme ${scheme}" "$@"
-fi
-}
 
 alias svim='sudoedit'
 . /etc/profile.d/vte.sh
+
+# feh settings
+alias feh="feh -F -."
+alias ix="curl -F 'f:1=<-' ix.io"
+TERMINAL="termite"
+# Bang! Previous Command Hotkeys
+# print previous command but only the first nth arguments
+# Alt+1, Alt+2 ...etc
+bindkey -s '\e1' "!:0 \t"
+bindkey -s '\e2' "!:0-1 \t"
+bindkey -s '\e3' "!:0-2 \t"
+bindkey -s '\e4' "!:0-3 \t"
+bindkey -s '\e5' "!:0-4 \t"
+bindkey -s '\e`' "!:- \t"     # all but the last word
+bindkey -s '\e0' "!* \t" # only arguments
+# Set SSH to use gpg-agent
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi

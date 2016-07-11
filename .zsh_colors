@@ -1,0 +1,30 @@
+# set default theme here
+b16_theme="base16-default-dark.sh"
+
+# export variable
+BASE16_SHELL="$HOME/bin/base16-shell/scripts/${b16_theme}"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# function for theme selection with tab key
+b16() {
+    BASE16_SHELL="$@"
+    [[ -s $HOME/bin/base16-shell/scripts/$BASE16_SHELL ]] && source $HOME/bin/base16-shell/scripts/$BASE16_SHELL
+}
+
+compdef '_files -W '$HOME/bin/base16-shell/scripts' -g "*.sh"' b16
+
+# apply current base16 theme to vim
+vim() {
+  scheme="$(basename $(echo "${BASE16_SHELL}"))"
+  if [[ "${scheme}" =~ "-light.sh" ]]; then
+    scheme="${scheme%.sh}"
+    /usr/bin/vim "+set background=light" "+colorscheme ${scheme}" "$@"
+  elif [[ "${scheme}" =~ "-dark.sh" ]]; then
+    scheme="${scheme%.sh}"
+    /usr/bin/vim "+set background=dark" "+colorscheme ${scheme}" "$@"
+  else
+    echo "${scheme}"
+    scheme="${scheme%.sh}"
+    /usr/bin/vim "+colorscheme ${scheme}" "$@"
+  fi
+}
