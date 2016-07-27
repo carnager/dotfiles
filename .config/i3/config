@@ -15,7 +15,7 @@ set $mod Mod4
 font pango:Pragmata Pro 10
 floating_modifier $mod
 focus_follows_mouse no
-new_window pixel 5
+new_window pixel 1
 popup_during_fullscreen smart
 force_display_urgency_hint 500 ms
 
@@ -72,11 +72,12 @@ bindsym Print exec teiler
 bindsym Shift+Print exec --no-startup-id teiler --togglecast
 bindsym --release $mod+Print exec --no-startup-id teiler --quick area
 bindsym Pause exec misc
-bindsym $mod+F9 exec --no-startup-id robot
+bindsym $mod+F9 exec --no-startup-id ~/bin/buku_run
 bindsym $mod+Scroll_Lock exec --no-startup-id dofi
 bindsym $mod+Insert exec utf8
-bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+p exec --no-startup-id rofi -show run -no-levenshtein-sort
 bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+F11 exec --no-startup-id np
 
 ### mpd keybindings
 bindsym $mod+F6 exec mpc toggle
@@ -98,8 +99,7 @@ bindsym $mod+Control+F6 exec --no-startup-id clerk --queue show
 bindsym $mod+Control+F7 exec --no-startup-id clerk --queue delete
 bindsym $mod+Mod1+F4 exec --no-startup-id clerk --add latest
 bindsym $mod+Shift+F11 exec --no-startup-id rofi-pass
-bindsym $mod+Control+F11 exec --no-startup-id rofi-pass --last-used
-bindsym $mod+Escape exec --no-startup-id i3lock
+bindsym $mod+Escape exec --no-startup-id $HOME/focus
 
 
 # Custom Modes
@@ -167,7 +167,7 @@ assign [class="Gimp"] $workspace6
 for_window [class="^xv|mplayer2|Steam|Wine|mpv|Qjackctl|Pavucontrol|Copyq|feh"] floating enable
 for_window [title="^PangoCairo*"] floating enable
 for_window [title="PlayOnLinux"] floating enable
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 1
 for_window [class="Spotify"] move to workspace $workspace4
 
 
