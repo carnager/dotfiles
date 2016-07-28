@@ -1,0 +1,40 @@
+#include /home/carnager/.config/rofi/colors/base16
+rofi.display-drun:      
+rofi.display-run:       
+rofi.display-ssh:       
+rofi.display-window:    
+rofi.color-enabled: true
+rofi.scrollbar-width:       0
+rofi.borderwidth:	        3
+rofi.levenshtein-sort:      true
+rofi.monitor                -4
+rofi.font:                  Pragmata Pro 12
+rofi.padding:	            3
+rofi.threads:               8
+rofi.ssh-client:            mosh
+rofi.modi:                  window,run,drun,ssh
+rofi.ssh-command:           termite -e '{ssh-client} {host}'
+rofi.run-command:           {cmd}
+rofi.run-shell-command:     {terminal} -e '{cmd}'
+rofi.terminal:              termite
+rofi.lazy-filter-limit:     400
+rofi.fg-active:             #FF22FF
+rofi.kb-custom-1:           Alt+1
+rofi.kb-custom-2:           Alt+2
+rofi.separator-style:       solid
+rofi.case-insensitive:      true
+rofi.kb-custom-3:           Alt+3
+rofi.kb-custom-4:           Alt+4
+rofi.kb-custom-5:           Alt+5
+rofi.kb-custom-6:           Alt+6
+rofi.kb-custom-7:           Alt+7
+rofi.kb-custom-8:           Alt+8
+rofi.kb-custom-9:           Alt+9
+rofi.key-run:               F2
+rofi.kb-accept-alt:         Tab
+!rofi.color-enabled: true
+!rofi.color-window: #111111, #111111, #2d7ed8
+!rofi.color-normal: #111111, #d1d1d1, argb:0111111, #2d7ed8, #ffffff
+!rofi.color-active: #111111, #2d7ed8, #111111, #2d7ed8, #ffffff
+!rofi.color-urgent: #111111, #e35656, #111111, #e35656, #ffffff
+
